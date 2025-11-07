@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firebase Dynamic Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Student Registration Form (Firebase Dynamic)</h1>
+
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Students List</h2>
+    <div id="studentsList"></div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDKMtAWtKrdFFF8mVt1PZt1rPQHiM3_mRA",
+        authDomain: "srp-version-one.firebaseapp.com",
+        projectId: "srp-version-one",
+        storageBucket: "srp-version-one.firebasestorage.app",
+        messagingSenderId: "1000077611765",
+        appId: "1:1000077611765:web:5a7a12ae7b0515f21cebbc",
+      };
+
+      // Initialize Firebase
+      const db = getFirestore(app);
+
+      // Add student
+      document
+        .getElementById("studentForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+
+          try {
+            await addDoc(collection(db, "students"), {
+              name: name,
+              email: email,
+              timestamp: new Date(),
+            });
+            alert("Student added!");
+            document.getElementById("studentForm").reset();
+            loadStudents();
+          } catch (error) {
+            console.error("Error adding student:", error);
+          }
+        });
+
+      // Load and display students
+      async function loadStudents() {
+        const studentsList = document.getElementById("studentsList");
+        studentsList.innerHTML = "";
+
+        const querySnapshot = await getDocs(collection(db, "students"));
+        console.log(querySnapshot);
+        querySnapshot.forEach((docSnap) => {
+          const student = docSnap.data();
+          const div = document.createElement("div");
+          div.innerHTML = `
+          <p><strong>${student.name}</strong> - ${student.email}
+          <button onclick="deleteStudent('${docSnap.id}')">Delete</button></p>
+        `;
+          studentsList.appendChild(div);
+        });
+      }
+
+      // Delete student
+      window.deleteStudent = async (id) => {
+        await deleteDoc(doc(db, "students", id));
+        loadStudents();
+      };
+
+      // Load students when page starts
+      loadStudents();
+    </script>
+  </body>
+</html>

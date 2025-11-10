@@ -1,126 +1,84 @@
-// handling
-let userData = [];
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import {
+  getFirestore,
+  getDocs,
+  collection,
+} from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+let allBooks = [];
 
-const userName = document.getElementById("userName");
-const userEmail = document.getElementById("userEmail");
-const userNumber = document.getElementById("userNumber");
-const userColor = document.getElementById("userColor");
-const userSave = document.getElementById("saveUserBtn");
-const userInfo = document.getElementById("userInfo");
-const totalUsers = document.getElementById("totalUsers");
+const bookTitle = document.getElementById("bookTitle");
+const bookAuthor = document.getElementById("bookAuthor");
+const bookRating = document.getElementById("bookRating");
+const bookGenre = document.getElementById("bookGenre");
+const saveBookBtn = document.getElementById("saveBookBtn");
+const bookInfo = document.getElementById("bookInfo");
 
-// functionality
+// adding firestore
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCThuUEk2dOCvr8oNlLNFwSRDR7fVMP3tA",
+  authDomain: "books-2e181.firebaseapp.com",
+  projectId: "books-2e181",
+  storageBucket: "books-2e181.firebasestorage.app",
+  messagingSenderId: "803382735961",
+  appId: "1:803382735961:web:f9214b0016f51201856d48",
+};
 
-// rendering data
-const renderuserInfo = () => {
-  // userInfo.innerHTML = "";
-  // const h4 = document.createElement("h4");
-  // h4.innerHTML = "Total reg user " + userData.length;
-  // userInfo.appendChild(h4);
-  userData.forEach((userDataDetail, index) => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <h3>${userDataDetail.name}</h3>
-      <span>  
-      <h4>E-mail: ${userDataDetail.email}</h4>
-      <h4>Age: ${userDataDetail.number}</h4>
-      <span class="action_btns">
-        <button id="deleteUserInfo-${index}" class="btn delete_btn">Delete</button>
-        <button id="editUserInfo-${index}" class="btn edit_btn">Edit</button>
-      </span>
-      </span>`;
-    // colorized
-    div.style.backgroundColor = `${userDataDetail.color}`;
-    userInfo.appendChild(div);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-    // deleting element by id(index)
-    div.querySelector(`#deleteUserInfo-${index}`).onclick = () => {
-      userData.splice(index, 1);
-      addLocalStorageData();
-      renderuserInfo();
-    };
-    // editing
-    div.querySelector(`#editUserInfo-${index}`).onclick = () => {
-      userName.value = userDataDetail.name;
-      userEmail.value = userDataDetail.email;
-      userNumber.value = userDataDetail.number;
-      userColor.value = userDataDetail.color;
-      userData.splice(index, 1);
-      addLocalStorageData();
-      renderuserInfo();
-    };
+// getInfo from db
+const getBooksDb = async () => {
+  const myBooks = await getDocs(collection(db, "books"));
+  myBooks.forEach((books) => {
+    const book = books.data();
+    const bookDiv = document.createElement("div");
+    bookDiv.innerHTML = ` <h3>${book.title}</h3> <span>
+                <h4>E-mail: ${book.genre}</h4>
+               <h4>Age: ${book.author}</h4>
+               <span class="action_btns">
+              <b id="deleteUserInfo-${books.id}" class="btn delete_btn">Delete</b  utton>
+          </span>
+          </span>
+    `;
+    bookInfo.appendChild(bookDiv);
+    console.log(bookDiv);
   });
 };
 
-// adding data local storage
-const addLocalStorageData = () => {
-  localStorage.setItem("userData", JSON.stringify(userData));
-};
+// add info to firebase
 
-// get data from storage
-const getLocalStorageData = () => {
-  const localStorageData = localStorage.getItem("userData");
-  if (localStorageData) {
-    userData = JSON.parse(localStorageData);
-  }
-};
-// adding new data
-userSave.onclick = () => {
-  const userNameValue = userName.value.trim();
-  const userEmailValue = userEmail.value;
-  const userNumberValue = userNumber.value;
-  const userColorValue = userColor.value;
-
-  const userDataValue = {
-    name: userNameValue,
-    email: userEmailValue,
-    number: userNumberValue,
-    color: userColorValue,
+async function addBooksFrDb(bookDataValue) {
+  await addDoc(collection(db, "library"), bookDataValue);
+}
+// saving data in aaray
+saveBookBtn.onclick = (event) => {
+  event.preventDeafult();
+  //   handling added new data on inputs
+  const bookTitleValue = bookTitle.value.trim();
+  const bookAuthorValue = bookAuthor.value.trim();
+  const bookRatingValue = bookRating.value.trim();
+  const bookGenreValue = bookGenre.value;
+  // build object with added data
+  const bookDataValue = {
+    title: bookTitleValue,
+    author: bookAuthorValue,
+    rating: bookRatingValue,
+    genre: bookGenreValue,
   };
 
-  if (
-    !userNameValue ||
-    !userEmailValue ||
-    !userNumberValue ||
-    userNumberValue < 0
-  ) {
-    alert("Check all fields");
-    return;
-  }
-
-  userData.push(userDataValue);
-  addLocalStorageData();
-  renderuserInfo();
-  userName.value = "";
-  userEmail.value = "";
-  userNumber.value = "";
-  userColor.value = "";
+  //   adding in array
+  allBooks.push(bookDataValue);
+  getBooksDb();
+  addBooksFrDb(bookDataValue);
+  //   empty inputs after forming array
+  bookTitle.value = "";
+  bookAuthor.value = "";
+  bookRating.value = "";
+  bookGenre.value = "";
 };
-
-// sorting array by name formula
-userData.sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-  return 0;
-});
-
-getLocalStorageData();
-renderuserInfo();
-
-// document.getElementById("sorting").onchange = (e) => {
-//   const choosenSort = e.target.value;
-//   if (choosenSort === "name") {
-//     userData.sort((a, b) => a.name.localeCompare(b.name));
-//   } else if (choosenSort === "email") {
-//     userData.sort((a, b) => a.email.localeCompare(b.email));
-//   } else if (choosenSort === "age") {
-//     userData.sort((a, b) => a.number - b.number);
-//   }
-//   addLocalStorageData();
-// };
+getBooksDb();

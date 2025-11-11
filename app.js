@@ -1,10 +1,26 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
 import {
   getFirestore,
-  getDocs,
+  onSnapshot,
   collection,
   addDoc,
+  deleteDoc,
+  doc,
 } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
+const starIcon = `  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M11.9961 1.25C13.0454 1.25 13.8719 2.04253 14.3995 3.11191L16.1616 6.66516C16.215 6.77513 16.3417 6.92998 16.5321 7.07164C16.7223 7.21315 16.9086 7.29121 17.0311 7.3118L20.2207 7.84613C21.3729 8.03973 22.3386 8.60449 22.6521 9.5879C22.9653 10.5705 22.5064 11.5916 21.6778 12.4216L21.677 12.4225L19.1991 14.9209C19.1009 15.0199 18.9909 15.2064 18.9219 15.4494C18.8534 15.6908 18.8473 15.9107 18.8784 16.0527L18.8788 16.0547L19.5877 19.1454C19.8818 20.4317 19.7843 21.7073 18.8771 22.3742C17.9667 23.0433 16.7227 22.7467 15.5925 22.0736L12.6026 20.289C12.477 20.214 12.2614 20.1532 12.0011 20.1532C11.7427 20.1532 11.5226 20.2132 11.3888 20.291L11.3869 20.2921L8.40288 22.0732C7.27405 22.7487 6.03154 23.04 5.12111 22.3702C4.21449 21.7032 4.11214 20.43 4.40711 19.1447L5.1159 16.0547L5.11633 16.0527C5.14741 15.9107 5.14133 15.6908 5.0728 15.4494C5.0038 15.2064 4.89379 15.0199 4.79558 14.9209L2.31585 12.4206C1.49265 11.5906 1.03521 10.5704 1.34595 9.58925C1.65759 8.60525 2.62143 8.0398 3.77433 7.84606L6.96132 7.31219L6.96233 7.31202C7.07917 7.29175 7.2627 7.21456 7.45248 7.07268C7.64261 6.93054 7.76959 6.77535 7.82312 6.66516L7.82582 6.65967L9.58562 3.11097L9.58632 3.10957C10.119 2.04108 10.948 1.25 11.9961 1.25Z"
+      fill="#FFE100"
+    />
+  </svg>`;
+
 let allBooks = [];
 
 const bookTitle = document.getElementById("bookTitle");
@@ -18,7 +34,6 @@ const bookInfo = document.getElementById("bookInfo");
 const countBooks = document.getElementById("countBooks");
 
 // adding firestore
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCThuUEk2dOCvr8oNlLNFwSRDR7fVMP3tA",
   authDomain: "books-2e181.firebaseapp.com",
@@ -32,20 +47,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// getInfo from db
-const getBooksDb = async () => {
-  // rendering data from db
-  const myBooks = await getDocs(collection(db, "books"));
-  console.log(myBooks);
+// collect to a\rray then render with sort attr
+onSnapshot(collection(db, "books"), (snapshot) => {
+  bookInfo.innerHTML = "";
 
-  myBooks.forEach((books) => {
+  snapshot.forEach((books) => {
+    const bookId = books.id;
+
     const book = books.data();
     console.log(book);
+    function ratingStar(rating) {
+      let stars = "";
+      for (let i = 0; i < parseInt(rating); i++) {
+        stars += starIcon;
+      }
+      return stars;
+    }
+
     const bookDiv = document.createElement("div");
+
     bookDiv.innerHTML = ` 
           <span class="addBook_title"> 
             <h3>${book.title}</h3> 
-            <p>Rating: ${book.rating}</p>
+            <p>Rating: ${ratingStar(book.rating)}</p>
           </span>
           <span class="addBook_desc">
                <h4>Author: ${book.author}</h4>
@@ -64,15 +88,19 @@ const getBooksDb = async () => {
               </span>
               <button class="btn delete_btn">Delete</button>
           </span>`;
+    // deleting one choosen book
+    const deleteBtn = bookDiv.querySelector(".delete_btn");
+    deleteBtn.addEventListener("click", () =>
+      deleteDoc(doc(db, "books", bookId))
+    );
     bookInfo.appendChild(bookDiv);
 
     // counter
-    countBooks.innerHTML = `Total books ` + myBooks.size;
+    countBooks.innerHTML = `Total books ` + snapshot.size;
   });
-};
+});
 
 // add info to firebase
-
 async function addBooksFrDb(bookDataValue) {
   await addDoc(collection(db, "books"), bookDataValue);
 }
@@ -97,7 +125,7 @@ saveBookBtn.onclick = (e) => {
     comment: bookCommentsValue,
     finishedDate: bookFinishedDateValue,
   };
-
+  // is empty
   if (
     !bookTitleValue ||
     !bookAuthorValue ||
@@ -121,3 +149,7 @@ saveBookBtn.onclick = (e) => {
   bookFinishedDate.value = "";
   bookComments.value = "";
 };
+
+//filtering by book value
+const selectedFilter = document.getElementById("selectedFilter");
+const selectedFilterValue = selectedFilter.options.value;

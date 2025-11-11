@@ -69,7 +69,7 @@ onSnapshot(collection(db, "books"), (snapshot) => {
     bookDiv.innerHTML = ` 
           <span class="addBook_title"> 
             <h3>${book.title}</h3> 
-            <p>Rating: ${ratingStar(book.rating)}</p>
+            <p>Rating: ${ratingStar(book.rating > 5 ? 5 : book.rating)}</p>
           </span>
           <span class="addBook_desc">
                <h4>Author: ${book.author}</h4>

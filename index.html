@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <div class="container">
@@ -11,17 +12,15 @@
         <h2>Refistration form</h2>
       </div>
     </div>
-    <form>
-      <label for="bookTitle">
-        <input type="text" id="bookTitle" placeholder="bookTitle" />
-      </label>
-      <label for="bookAuthor">
-        <input type="text" id="bookAuthor" placeholder="bookAuthor" />
-      </label>
-      <label for="bookRating">
-        <input type="number" id="bookRating" placeholder="bookRating" />
-      </label>
-      <select name="bookGenre" id="bookGenreSelect">
+    <form action="">
+      <label for="bookTitle"> bookTitle</label>
+      <input type="text" id="bookTitle" placeholder="bookTitle" />
+      <label for="bookAuthor">bookAuthor </label>
+      <input type="text" id="bookAuthor" placeholder="bookAuthor" />
+      <label for="bookRating"> bookRating</label>
+      <input type="number" max="5" min="1" id="bookRating" placeholder="bookRating" />
+      <label for="bookGenreSelect"> bookGenreSelect</label>
+      <select name="bookGenreSelect" id="bookGenreSelect">
         <option value="fanatsy">Fanatsy</option>
         <option value="classic">Classic</option>
         <option value="sci_Fi">Sci-Fi</option>
@@ -29,14 +28,26 @@
         <option value="young_adult">Young Adult</option>
         <option value="for_kids">For kids</option>
       </select>
+      <label for="bookComments">bookComments</label>
+      <textarea name="bookComments" id="bookComments" maxlength="100"></textarea>
+      <label for="bookFinishedDate">bookFinishedDate</label>
+      <input type="date" id="bookFinishedDate"></input>
       <button id="saveBookBtn" type="submit">Save Book</button>
     </form>
     <div class="allData">
       <div class="titleData">
-        <h3>All User Data</h3>
+        <h3>All Books</h3>
       </div>
-      <!-- need fixing -->
+      <!-- filters -->
+       <div class="actions_data">
+        <div class="filter_genre"></div>
+        <div class="filter_rating"></div>
+        <div class="search"></div>
+         <p id="countBooks"></p>
+        </div>
+
       <div id="bookInfo"></div>
     </div>
   </body>
+  <script type="module" src="./app.js"></script>
 </html>

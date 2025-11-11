@@ -32,6 +32,7 @@ const bookFinishedDate = document.getElementById("bookFinishedDate");
 const saveBookBtn = document.getElementById("saveBookBtn");
 const bookInfo = document.getElementById("bookInfo");
 const countBooks = document.getElementById("countBooks");
+const searchInput = document.getElementById("searchInput");
 
 // adding firestore
 const firebaseConfig = {
@@ -47,6 +48,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+searchInput.addEventListener("change", (e) => {
+  console.log(e.target.value);
+});
+
 // collect to a\rray then render with sort attr
 onSnapshot(collection(db, "books"), (snapshot) => {
   bookInfo.innerHTML = "";
@@ -55,7 +60,7 @@ onSnapshot(collection(db, "books"), (snapshot) => {
     const bookId = books.id;
 
     const book = books.data();
-    console.log(book);
+    // rendering star by book rating
     function ratingStar(rating) {
       let stars = "";
       for (let i = 0; i < parseInt(rating); i++) {
@@ -64,9 +69,9 @@ onSnapshot(collection(db, "books"), (snapshot) => {
       return stars;
     }
 
+    // rendering one book
     const bookDiv = document.createElement("div");
-
-    bookDiv.innerHTML = ` 
+    const oneBookRender = (bookDiv.innerHTML = ` 
           <span class="addBook_title"> 
             <h3>${book.title}</h3> 
             <p>Rating: ${ratingStar(book.rating > 5 ? 5 : book.rating)}</p>
@@ -87,12 +92,16 @@ onSnapshot(collection(db, "books"), (snapshot) => {
                 }
               </span>
               <button class="btn delete_btn">Delete</button>
-          </span>`;
+          </span>`);
     // deleting one choosen book
     const deleteBtn = bookDiv.querySelector(".delete_btn");
     deleteBtn.addEventListener("click", () =>
       deleteDoc(doc(db, "books", bookId))
     );
+
+    if (searchInput === book.author || book.title) {
+      oneBookRender;
+    }
     bookInfo.appendChild(bookDiv);
 
     // counter
@@ -140,7 +149,7 @@ saveBookBtn.onclick = (e) => {
   //   adding in array
   allBooks.push(bookDataValue);
   addBooksFrDb(bookDataValue);
-
+  getBooksDb();
   //   empty inputs after forming array
   bookTitle.value = "";
   bookAuthor.value = "";
@@ -148,7 +157,6 @@ saveBookBtn.onclick = (e) => {
   bookGenre.value = "";
   bookFinishedDate.value = "";
   bookComments.value = "";
-  getBooksDb();
 };
 
 //filtering by book value

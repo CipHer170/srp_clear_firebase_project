@@ -32,6 +32,7 @@ const bookFinishedDate = document.getElementById("bookFinishedDate");
 const saveBookBtn = document.getElementById("saveBookBtn");
 const bookInfo = document.getElementById("bookInfo");
 const countBooks = document.getElementById("countBooks");
+const bookImageUrl = document.getElementById("bookImageUrl");
 
 // adding firestore
 const firebaseConfig = {
@@ -66,7 +67,10 @@ onSnapshot(collection(db, "books"), (snapshot) => {
 
     const bookDiv = document.createElement("div");
 
-    bookDiv.innerHTML = ` 
+    // <img src="${}" alt="bookImage">
+    bookDiv.innerHTML = `
+    <span>
+    </span> 
           <span class="addBook_title"> 
             <h3>${book.title}</h3> 
             <p>Rating: ${ratingStar(book.rating > 5 ? 5 : book.rating)}</p>
@@ -85,6 +89,7 @@ onSnapshot(collection(db, "books"), (snapshot) => {
                     ? `<p>finished date: ${book.finishedDate}</p>`
                     : `<p>not finished</p>`
                 }
+
               </span>
               <button class="btn delete_btn">Delete</button>
           </span>`;

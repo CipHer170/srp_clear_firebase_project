@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/mainStyle.css" />
+  <!-- <link rel="stylesheet" href="./style/style.css" /> -->
+</head>
+
+<body>
+
+  <div class="app">
+    <div class="container">
+      <div class="header">
+        <img src="./assets/logo.png" alt="" class="logo">
+        <h3 class="logo_title">Global Forum</h3>
+        <div class="faq">faq</div>
+      </div>
+      <div class="links">
+        <label for="showInvestorForm" class="showInvestorForm">
+          <a href="">Investors</a>
+        </label>
+        <label for="showProjectForm" class="showProjectForm">
+          <a href="">Project</a>
+        </label>
+      </div>
+    </div>
+    <input type="radio" name="showForm" id="closeForm" checked />
+    <input type="radio" name="showForm" id="showProjectForm" />
+    <input type="chechbox" id="showProjectForm" />
+    <!-- reg project form -->
+    <div class="regProject" id="regProject">
+      <form action="">
+        <div class="title">
+          <h2>Registration for Projects</h2>
+          <label for="closeForm" class="close_btn">Close</label>
+        </div>
+        <label for="bookTitle"> bookTitle</label>
+        <input type="text" id="bookTitle" placeholder="bookTitle" />
+        <label for="bookAuthor">bookAuthor </label>
+        <input type="text" id="bookAuthor" placeholder="bookAuthor" />
+        <label for="bookRating"> bookRating</label>
+        <input type="number" max="5" min="1" id="bookRating" placeholder="bookRating" />
+        <label for="bookGenreSelect"> bookGenreSelect</label>
+        <select name="bookGenreSelect" id="bookGenreSelect">
+          <option value="fanatsy">Fanatsy</option>
+          <option value="classic">Classic</option>
+          <option value="sci_Fi">Sci-Fi</option>
+          <option value="russian">Russian</option>
+          <option value="young_adult">Young Adult</option>
+          <option value="for_kids">For kids</option>
+        </select>
+        <label for="bookComments">bookComments</label>
+        <textarea name="bookComments" id="bookComments" maxlength="100"></textarea>
+        <label for="bookFinishedDate">bookFinishedDate</label>
+        <input type="date" id="bookFinishedDate"></input>
+        <label for="bookImageUrl">bookImageUrl</label>
+        <input type="text" id="bookImageUrl"></input>
+        <button id="saveBookBtn" type="submit">Save Book</button>
+      </form>
+
+    </div>
+
+
+    <input type="radio" name="showForm" id="showInvestorForm" />
+    <!-- reg invest forrm -->
+    <div class="regInvestor" id="regInvestor">
+      <form action="">
+        <div class="title">
+          <h2>Registration for Investors</h2>
+          <label for="closeForm" class="close_btn">close</label>
+        </div>
+        <label for="bookTitle"> bookTitle</label>
+        <input type="text" id="bookTitle" placeholder="bookTitle" />
+        <label for="bookAuthor">bookAuthor </label>
+        <input type="text" id="bookAuthor" placeholder="bookAuthor" />
+        <label for="bookRating"> bookRating</label>
+        <input type="number" max="5" min="1" id="bookRating" placeholder="bookRating" />
+        <label for="bookGenreSelect"> bookGenreSelect</label>
+        <select name="bookGenreSelect" id="bookGenreSelect">
+          <option value="fanatsy">Fanatsy</option>
+          <option value="classic">Classic</option>
+          <option value="sci_Fi">Sci-Fi</option>
+          <option value="russian">Russian</option>
+          <option value="young_adult">Young Adult</option>
+          <option value="for_kids">For kids</option>
+        </select>
+        <label for="bookComments">bookComments</label>
+        <textarea name="bookComments" id="bookComments" maxlength="100"></textarea>
+        <label for="bookFinishedDate">bookFinishedDate</label>
+        <input type="date" id="bookFinishedDate"></input>
+        <label for="bookImageUrl">bookImageUrl</label>
+        <input type="text" id="bookImageUrl"></input>
+        <button id="saveBookBtn" type="submit">Save Book</button>
+      </form>
+
+    </div>
+
+
+
+
+  </div>
+
+
+  </div>
+</body>
+<script type="module" src="./app.js"></script>
+
+</html>

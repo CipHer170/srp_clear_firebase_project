@@ -1,0 +1,223 @@
+/* Base Styles */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3f7;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --text-color: #333;
+    --light-bg: #f5f7fa;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.parallax-header {
+    height: 100vh;
+    background: linear-gradient(rgba(22, 96, 136, 0.7), rgba(22, 96, 136, 0.7)),
+        url('https://source.unsplash.com/random/1920x1080/?nature') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.form-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.interactive-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transform: translateY(-50px);
+    position: relative;
+    z-index: 10;
+
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 2px var(--secondary-color);
+
+}
+
+/*when placeholder not shown and entered value shoud be valid then  get this styles  */
+.form-group input:not(:placeholder-shown):valid {
+    border-color: var(--success-color);
+}
+
+/*when placeholder not shown BUT entered value not valid then  get this styles  */
+.form-group input:not(:placeholder-shown):invalid {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    display: none;
+}
+
+/* input записаны неверное значение и при этом foced, тогда пускай error-message покажется */
+input:invalid:focus+.error-message,
+textarea:invalid:focus+.error-message {
+    display: block;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    padding: 12px 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin: auto;
+
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.submit-btn:active {
+    background-color: #e74c3c;
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 60vh;
+    background: url('./assets/erwan-hesry-e9jV1ZyrOmg-unsplash.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin: 80px 0;
+}
+
+.parallax-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 20px;
+}
+
+.parallax-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Content Section */
+.content-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #e1e5ee;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}

@@ -3,67 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/style.css" />
+    <title>Interactive Demo</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-    <a href="./pages/regInvestor.html">Investors</a>
-    <a href="./pages/regProject.html">Project</a>
-
-
-
-
-    </div>
-  </body>
-  <script type="module" src="./app.js"></script>
-</html>
-
-    <!-- <div class="container">
-      <div class="title">
-        <h2>Refistration form</h2>
+    <header class="parallax-header">
+      <div class="header-content">
+        <h1>Interactive Demo</h1>
+        <p>Explore the power of CSS interactions and parallax effects</p>
       </div>
-    </div> -->
-    <!-- <form action="">
-      <label for="bookTitle"> bookTitle</label>
-      <input type="text" id="bookTitle" placeholder="bookTitle" />
-      <label for="bookAuthor">bookAuthor </label>
-      <input type="text" id="bookAuthor" placeholder="bookAuthor" />
-      <label for="bookRating"> bookRating</label>
-      <input type="number" max="5" min="1" id="bookRating" placeholder="bookRating" />
-      <label for="bookGenreSelect"> bookGenreSelect</label>
-      <select name="bookGenreSelect" id="bookGenreSelect">
-        <option value="fanatsy">Fanatsy</option>
-        <option value="classic">Classic</option>
-        <option value="sci_Fi">Sci-Fi</option>
-        <option value="russian">Russian</option>
-        <option value="young_adult">Young Adult</option>
-        <option value="for_kids">For kids</option>
-      </select>
-      <label for="bookComments">bookComments</label>
-      <textarea name="bookComments" id="bookComments" maxlength="100"></textarea>
-      <label for="bookFinishedDate">bookFinishedDate</label>
-      <input type="date" id="bookFinishedDate"></input>
-      <label for="bookImageUrl">bookImageUrl</label>
-      <input type="text" id="bookImageUrl"></input>
-      <button id="saveBookBtn" type="submit">Save Book</button>
-    </form> -->
-    <!-- <div class="allData">
-      <div class="titleData">
-        <h3>All Books</h3>
-      </div> -->
-      <!-- filters -->
-       <!-- <div class="actions_data">
-         <p id="countBooks"></p>
-         <input class="search" placeholder="Search" id="searchInput"></input>
-        <div class="filter"> 
-          <label for="">Filters</label>
-          <select name="filter" id="selectedFilter">
-            <option value="genre">genre</option>
-            <option value="rating">rating</option>
-          </select>
-        </div>
-       
-        </div> -->
+    </header>
 
-      <!-- <div id="bookInfo"></div> -->
+    <main>
+      <section class="form-section">
+        <div class="container">
+          <h2>Interactive Form</h2>
+          <form id="demoForm" class="interactive-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                pattern="[A-Za-z\s]{3,}"
+                title="Please enter at least 3 characters"
+                placeholder="da"
+              />
+              <!-- RegEx  pattern -->
+              <span class="error-message"
+                >Please enter a valid name (min 3 characters)</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="afs"/>
+              <span class="error-message"
+                >Please enter a valid email address</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"
+                placeholder="sd"
+              />
+              <span class="error-message"
+                >Password must be at least 8 characters with uppercase,
+                lowercase, and numbers</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+              <span class="error-message">Please enter your message</span>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="parallax-section">
+        <div class="parallax-content">
+          <h2>Parallax Scrolling Effect</h2>
+          <p>Scroll to see the parallax effect in action</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <h2>More Content</h2>
+          <p>
+            This section has regular scrolling content. Notice how it moves at a
+            different speed than the parallax section when scrolling.
+          </p>
+          <div class="content-grid">
+            <div class="card">
+              <h3>Feature One</h3>
+              <p>
+                Interactive forms with real-time validation and visual feedback.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Feature Two</h3>
+              <p>Smooth parallax scrolling effects without JavaScript.</p>
+            </div>
+            <div class="card">
+              <h3>Feature Three</h3>
+              <p>Fully responsive design that works on all devices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="parallax-footer">
+      <div class="container">
+        <p>&copy; 2025 Interactive Demo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

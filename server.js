@@ -115,7 +115,7 @@ http
 
         const investor = investorResult.rows[0];
 
-        // Не учитывает, что стартап, соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
+        //соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
         // matching
         const matchesResult = await pool.query(
           `SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count,
@@ -127,7 +127,38 @@ http
           ORDER BY match_score DESC, meeting_count ASC LIMIT 3`,
           [investor.industries || [], investor.stages || []]
         );
+        let finalMatches = matchesResult.rows;
 
+        // Fallback: If less than 3 matches, fill with startups having lowest meeting_count
+        if (finalMatches.length < 3) {
+          const needed = 3 - finalMatches.length;
+          const existingIds = finalMatches.map((m) => m.id);
+
+          let fallbackQuery =
+            "SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count FROM startups";
+          let fallbackParams = [];
+
+          if (existingIds.length > 0) {
+            fallbackQuery += " WHERE id != ANY($1)";
+            fallbackParams.push(existingIds);
+          }
+
+          // Fetch startups with lowest meeting_count
+          fallbackQuery += ` ORDER BY meeting_count ASC LIMIT $${
+            fallbackParams.length + 1
+          }`;
+          fallbackParams.push(needed);
+
+          try {
+            const fallbackResult = await pool.query(
+              fallbackQuery,
+              fallbackParams
+            );
+            finalMatches = finalMatches.concat(fallbackResult.rows);
+          } catch (fallbackErr) {
+            console.error("Fallback Query Error:", fallbackErr);
+          }
+        }
         // +1 meeting_count
         if (matchesResult.rows.length > 0) {
           const startupIds = matchesResult.rows.map((s) => s.id);
@@ -146,7 +177,7 @@ http
               industries: investor.industries,
               stages: investor.stages,
             },
-            matches: matchesResult.rows,
+            matches: finalMatches,
           })
         );
       } catch (err) {

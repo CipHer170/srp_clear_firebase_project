@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Scanner</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="registration_form">
+            <h2>Введите ID гостя</h2>
+            <p>Этот инструмент используется сотрудниками Co:cubed для быстрого поиска матчей.</p>
+
+            <span class="group">
+                <label for="investorId">Investor ID (число)</label>
+                <input type="number" id="investorId" placeholder="Введите ID инвестора" required>
+            </span>
+
+            <button id="scanButton" class="main-btn btn">Найти совпадения</button>
+
+            <a href="./index.html" class="secondary-btn btn" style="margin-top: 20px;">
+                Назад (Главное меню)
+            </a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('scanButton').addEventListener('click', () => {
+            const id = document.getElementById('investorId').value;
+            if (id) {
+                window.location.href = `./scannedResults.html?id=${id}`;
+            } else {
+                alert('Пожалуйста, введите ID.');
+            }
+        });
+    </script>
+</body>
+
+</html> -->

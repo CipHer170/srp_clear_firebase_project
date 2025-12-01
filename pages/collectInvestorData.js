@@ -34,11 +34,12 @@ investorForm.addEventListener("submit", async (e) => {
       body: JSON.stringify(formInvestorData),
     });
     const data = await response.json();
-    console.log("Luck");
-    console.log("Data", data);
-    console.log("Formdata", formInvestorData);
+    const regNewInvestor = data.receivedData.id;
+    console.log(data);
+    console.log(data.receivedData);
+    console.log(data.receivedData.id);
+
     investorForm.reset();
-    console.log("Formdata", formInvestorData);
   } catch (error) {
     console.error("Error:", error);
   }

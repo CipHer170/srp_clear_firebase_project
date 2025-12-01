@@ -115,32 +115,18 @@ http
 
         const investor = investorResult.rows[0];
 
+        // Не учитывает, что стартап, соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
         // matching
         const matchesResult = await pool.query(
-          `SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count,(
+          `SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count,
+          (
           (SELECT COUNT(*) FROM unnest(industries) AS i WHERE i = ANY($1::text[])) +
           (SELECT COUNT(*) FROM unnest(stages) AS s WHERE s = ANY($2::text[]))) AS match_score 
           FROM startups 
-          WHERE industries && $1::text[] OR stages && $2::text[] ORDER BY match_score DESC, meeting_count ASC LIMIT 3`,
+          WHERE industries && $1::text[] OR stages && $2::text[] 
+          ORDER BY match_score DESC, meeting_count ASC LIMIT 3`,
           [investor.industries || [], investor.stages || []]
         );
-        // do not wiork
-        // let matches = investorResult.rows;
-        // if (matches.length < 3) {
-        //   const neededCount = 3 - matches.length;
-        //   // if not matched show random
-        //   const fallbackResult = await pool.query(
-        //     `SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count
-        //         FROM startups
-        //         WHERE meeting_count = 0
-        //         AND id != ALL(ARRAY[$3::int[]]) -- Исключаем стартапы, которые уже нашли
-        //         ORDER BY RANDOM()
-        //         LIMIT $1`,
-        //     [neededCount, neededCount, matches.map((m) => m.id)]
-        //   );
-
-        //   matches = matches.concat(fallbackResult.rows);
-        // }
 
         // +1 meeting_count
         if (matchesResult.rows.length > 0) {

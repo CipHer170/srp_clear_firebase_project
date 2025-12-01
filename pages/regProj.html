@@ -4,70 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="main_image">
-        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dz"
-            alt="">
-    </div>
-    <div class="registration_form">
-        <div class="navigation">
-
-            <a href="../index.html">
-                <-- </a>
+    <div class="container">
+        <div class="main_image">
+            <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dz"
+                alt="">
         </div>
-        <div class="form">
-            <form action="">
+        <div class="registration_form">
+            <div class="navigation">
+
+                <a href="../index.html" class="secondary-btn btn">
+                    Back </a>
+            </div>
+            <div class="form">
                 <h2>Project Registration Form</h2>
-                <label for="Name">Organization Name</label>
-                <input type="text" placeholder="Organization name" required>
-                <label for="website">Website</label>
-                <input type="url" placeholder="Website URL">
-                <label for="">Description</label>
-                <textarea name="description" id="description" maxlength="200" cols="30" rows="5"
-                    placeholder="Write about your organization..."></textarea>
+                <form action="submit" id="projectForm">
+                    <span class="group">
 
-                <label for="">Choose industry</label>
-                <select name="industry" id="fields">
-                    <option value="technology">technology</option>
-                    <option value="healthcare">healthcare</option>
-                    <option value="education">education</option>
-                    <option value="finance">finance</option>
-                    <option value="entertainment">entertainment</option>
-                    <option value="ai">Artificial Intelligence</option>
-                </select>
+                        <label for="Name">Organization Name</label>
+                        <input type="text" placeholder="project name" id="projectName">
+                    </span>
+                    <span class="group">
+
+                        <label for="website">Website</label>
+                        <input type="url" id="projectUrl" placeholder="Website URL">
+                    </span>
+                    <span class="group">
+
+                        <label for="">Choose industry</label>
+                        <input type="checkbox" id="healthcare" value="healthcare" name="industry">
+                        <label for="Healthcare">Healthcare</label>
+                        <input type="checkbox" id="education" value="education" name="industry">
+                        <label for="Education">Education</label>
+                        <input type="checkbox" id="finance" value="finance" name="industry">
+                        <label for=" Finance">Finance</label>
+                        <input type="checkbox" id="entertainment" value="entertainment" name="industry">
+                        <label for="Entertainment">Entertainment</label>
+                        <input type="checkbox" id="ai" value="ai" name="industry">
+                        <label for="AI">AI</label>
+                        <input type="checkbox" id="technology" value="technology" name="industry">
+                        <label for="Technology">Technology</label>
+
+                    </span>
+                    <span class="group">
+                        <label>Choose stage</label>
+                        <input type="checkbox" id="idea" value="idea" name="stage">
+                        <label for="idea">Idea Stage</label>
+                        <input type="checkbox" id="prototype" value="prototype" name="stage">
+                        <label for="prototype">Prototype Stage</label>
+                        <input type="checkbox" id="mvp" value="mvp" name="stage">
+                        <label for="mvp">MVP Stage</label>
+                        <input type="checkbox" id="release" value="release" name="stage">
+                        <label for="release">Release Stage</label>
+                    </span>
+                    <span class="group">
+                        <label for="email">Project Contact</label>
+                        <input type="email" id="projectEmail" placeholder="Email" required>
+                        <input type="text" placeholder="Full Name" id="projectContactName" required>
+                    </span>
+                    <span class="group">
+
+                        <label for="photo">Upload Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </span>
+
+                    <button type="submit" class="main-btn btn">Save</button>
+                </form>
+            </div>
 
 
-                <label>Choose stage</label><br>
-                <input type="checkbox" id="idea">
-                <label for="idea">Idea Stage</label>
-                <input type="checkbox" id="prototype">
-                <label for="prototype">Prototype Stage</label>
-                <input type="checkbox" id="mvp">
-                <label for="mvp">MVP Stage</label>
-                <input type="checkbox" id="release">
-                <label for="release">Release Stage</label>
 
-
-                <label for="email">Organization Email</label>
-                <input type="email" placeholder="Email" required>
-
-                <label for="contact_name">Contact Name</label>
-                <input type="number" placeholder="number" required>
-
-                <label for="logo">Upload Logo</label>
-                <input type="file" id="logo" name="logo" accept="image/*">
-
-                <button type="submit">Save</button>
-            </form>
         </div>
-
-
-
     </div>
 </body>
+<script src="./collectProjectData.js">
+</script>
 
 </html>

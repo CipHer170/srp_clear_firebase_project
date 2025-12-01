@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <title>Document</title>
 </head>
 
@@ -17,13 +17,63 @@
         <div class="registration_form">
             <div class="navigation">
 
-                <button>
-                    <a href="../index.html">
-                        <-- </a>
-                </button>
+                <a href="../index.html" class="secondary-btn btn">
+                    Back </a>
             </div>
             <div class="form">
-                Scanning badge...
+                <h2>Investor Registration Form</h2>
+                <form action="" id="investorForm">
+                    <span class="group">
+
+                        <label for="Name">Organization Name</label>
+                        <input type="text" placeholder="Organization name" id="organizationName">
+                    </span>
+                    <span class="group">
+
+                        <label for="website">Website</label>
+                        <input type="url" id="organizationUrl" placeholder="Website URL">
+                    </span>
+                    <span class="group">
+
+                        <label for="">Choose industry</label>
+                        <input type="checkbox" id="healthcare" value="healthcare" name="industry">
+                        <label for="Healthcare">Healthcare</label>
+                        <input type="checkbox" id="education" value="education" name="industry">
+                        <label for="Education">Education</label>
+                        <input type="checkbox" id="finance" value="finance" name="industry">
+                        <label for=" Finance">Finance</label>
+                        <input type="checkbox" id="entertainment" value="entertainment" name="industry">
+                        <label for="Entertainment">Entertainment</label>
+                        <input type="checkbox" id="ai" value="ai" name="industry">
+                        <label for="AI">AI</label>
+                        <input type="checkbox" id="technology" value="technology" name="industry">
+                        <label for="Technology">Technology</label>
+
+                    </span>
+                    <span class="group">
+                        <label>Choose stage</label>
+                        <input type="checkbox" id="idea" value="idea" name="stage">
+                        <label for="idea">Idea Stage</label>
+                        <input type="checkbox" id="prototype" value="prototype" name="stage">
+                        <label for="prototype">Prototype Stage</label>
+                        <input type="checkbox" id="mvp" value="mvp" name="stage">
+                        <label for="mvp">MVP Stage</label>
+                        <input type="checkbox" id="release" value="release" name="stage">
+                        <label for="release">Release Stage</label>
+                    </span>
+                    <span class="group">
+                        <label for="email">Organization Contact</label>
+                        <input type="email" id="investorEmail" placeholder="Email" required>
+                        <input type="text" placeholder="Name" id="investorName" required>
+                    </span>
+                    <span class="group">
+
+                        <label for="photo">Upload Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </span>
+
+                    <button type="submit" class="main-btn btn">Save</button>
+                </form>
             </div>
 
 
@@ -31,5 +81,9 @@
         </div>
     </div>
 </body>
+<script src="./collectInvestorData.js">
+</script>
+
+</html>
 
 </html>

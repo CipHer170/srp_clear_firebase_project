@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges Guest</title>
+</head>
+
+<body>
+    <div class="badge">
+        <div class="badge-header">INVESTOR BADGE</div>
+
+        <div class="contact-name">${data.contactName}</div>
+        <div class="organization-name">${data.name}</div>
+
+        <div class="section">
+            <div class="section-title">Industries</div>
+            <div class="tags">
+                ${data.industries.map(ind => `<span class="tag">${ind}</span>`).join('')}
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Stages</div>
+            <div class="tags">
+                ${data.stages.map(stage => `<span class="tag">${stage}</span>`).join('')}
+            </div>
+        </div>
+
+        <button class="print-button" onclick="window.print()"> Print Badge</button>
+    </div>
+</body>
+<script>
+    const badgeWindow = window.open('', '_blank');
+    badgeWindow.document.write(badgeHTML);
+    badgeWindow.document.close();
+</script>
+
+</html> -->

@@ -49,7 +49,7 @@ body {
   height: 100vh;
 }
 
-img {
+.container img {
   max-width: 100%;
   width: 500px;
   height: auto;
@@ -195,4 +195,17 @@ button[type="submit"]:hover {
 
 button[type="submit"]:active {
   transform: translateY(0);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container img {
+    display: none;
+  }
 }

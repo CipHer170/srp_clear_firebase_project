@@ -33,11 +33,11 @@ investorForm.addEventListener("submit", async (e) => {
       },
       body: JSON.stringify(formInvestorData),
     });
+
     const data = await response.json();
     const regNewInvestor = data.receivedData.id;
-    console.log(data);
-    console.log(data.receivedData);
-    console.log(data.receivedData.id);
+
+    window.location.href = `./scannedResults.html?id=${regNewInvestor}`;
 
     investorForm.reset();
   } catch (error) {

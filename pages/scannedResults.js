@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const investorId = urlParams.get("id");
 
+  if (!investorId) {
+    matchesContainer.innerHTML = "<p>ID not found</p>";
+    return;
+  }
   try {
     const response = await fetch(`http://localhost:3000/matches/${investorId}`);
-    if (!investorId) {
-      if (!response.ok) {
-        if (response.status === 404) {
-          matchesContainer.innerHTML =
-            "<p>Ошибка: Инвестор с таким ID не найден.</p>";
-          return;
-        }
-        throw new Error(`Server returned status: ${response.status}`);
+    if (!response.ok) {
+      if (response.status === 404) {
+        matchesContainer.innerHTML =
+          "<p>Ошибка: Инвестор с таким ID не найден.</p>";
+        return;
       }
-      matchesContainer.innerHTML = "<p>ID not found</p>";
-      return;
+      throw new Error(`Server returned status: ${response.status}`);
     }
 
     const data = await response.json();

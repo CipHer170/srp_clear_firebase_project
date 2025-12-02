@@ -1,0 +1,68 @@
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDKMtAWtKrdFFF8mVt1PZt1rPQHiM3_mRA",
+    authDomain: "srp-version-one.firebaseapp.com",
+    projectId: "srp-version-one",
+    storageBucket: "srp-version-one.firebasestorage.app",
+    messagingSenderId: "1000077611765",
+    appId: "1:1000077611765:web:5a7a12ae7b0515f21cebbc"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+    <!-- <div class="container">
+      <div class="title">
+        <h2>Refistration form</h2>
+      </div>
+    </div> -->
+    <!-- <form action="">
+      <label for="bookTitle"> bookTitle</label>
+      <input type="text" id="bookTitle" placeholder="bookTitle" />
+      <label for="bookAuthor">bookAuthor </label>
+      <input type="text" id="bookAuthor" placeholder="bookAuthor" />
+      <label for="bookRating"> bookRating</label>
+      <input type="number" max="5" min="1" id="bookRating" placeholder="bookRating" />
+      <label for="bookGenreSelect"> bookGenreSelect</label>
+      <select name="bookGenreSelect" id="bookGenreSelect">
+        <option value="fanatsy">Fanatsy</option>
+        <option value="classic">Classic</option>
+        <option value="sci_Fi">Sci-Fi</option>
+        <option value="russian">Russian</option>
+        <option value="young_adult">Young Adult</option>
+        <option value="for_kids">For kids</option>
+      </select>
+      <label for="bookComments">bookComments</label>
+      <textarea name="bookComments" id="bookComments" maxlength="100"></textarea>
+      <label for="bookFinishedDate">bookFinishedDate</label>
+      <input type="date" id="bookFinishedDate"></input>
+      <label for="bookImageUrl">bookImageUrl</label>
+      <input type="text" id="bookImageUrl"></input>
+      <button id="saveBookBtn" type="submit">Save Book</button>
+    </form> -->
+    <!-- <div class="allData">
+      <div class="titleData">
+        <h3>All Books</h3>
+      </div> -->
+      <!-- filters -->
+       <!-- <div class="actions_data">
+         <p id="countBooks"></p>
+         <input class="search" placeholder="Search" id="searchInput"></input>
+        <div class="filter"> 
+          <label for="">Filters</label>
+          <select name="filter" id="selectedFilter">
+            <option value="genre">genre</option>
+            <option value="rating">rating</option>
+          </select>
+        </div>
+       
+        </div> -->
+
+      <!-- <div id="bookInfo"></div> -->

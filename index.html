@@ -1,59 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="title">
-        <h2>Refistration form</h2>
-      </div>
-    </div>
-    <form action="">
-      <label for="bookTitle"> bookTitle</label>
-      <input type="text" id="bookTitle" placeholder="bookTitle" />
-      <label for="bookAuthor">bookAuthor </label>
-      <input type="text" id="bookAuthor" placeholder="bookAuthor" />
-      <label for="bookRating"> bookRating</label>
-      <input type="number" max="5" min="1" id="bookRating" placeholder="bookRating" />
-      <label for="bookGenreSelect"> bookGenreSelect</label>
-      <select name="bookGenreSelect" id="bookGenreSelect">
-        <option value="fanatsy">Fanatsy</option>
-        <option value="classic">Classic</option>
-        <option value="sci_Fi">Sci-Fi</option>
-        <option value="russian">Russian</option>
-        <option value="young_adult">Young Adult</option>
-        <option value="for_kids">For kids</option>
-      </select>
-      <label for="bookComments">bookComments</label>
-      <textarea name="bookComments" id="bookComments" maxlength="100"></textarea>
-      <label for="bookFinishedDate">bookFinishedDate</label>
-      <input type="date" id="bookFinishedDate"></input>
-      <button id="saveBookBtn" type="submit">Save Book</button>
-    </form>
-    <div class="allData">
-      <div class="titleData">
-        <h3>All Books</h3>
-      </div>
-      <!-- filters -->
-       <div class="actions_data">
-         <p id="countBooks"></p>
-         <input class="search" placeholder="Search" id="searchInput"></input>
-        <div class="filter"> 
-          <label for="">Filters</label>
-          <select name="filter" id="selectedFilter">
-            <option value="genre">genre</option>
-            <option value="rating">rating</option>
-          </select>
-        </div>
-       
-        </div>
 
-      <div id="bookInfo"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Main</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main_image">
+      <img
+        src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dz"
+        alt="">
     </div>
-  </body>
-  <script type="module" src="./app.js"></script>
+    <div class="registration">
+
+      <a href="pages/regInv.html" class="main-btn btn">
+        Investor
+      </a>
+      <a href="pages/regProj.html" class="main-btn btn">
+        Project Owner
+      </a>
+      <a href="/pages/scanner.html" class="secondary-btn btn">Scan</a>
+    </div>
+
+  </div>
+</body>
+
 </html>

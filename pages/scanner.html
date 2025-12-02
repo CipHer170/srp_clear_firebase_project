@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Scanner</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="registration_form">
+            <h2>Enter guest ID</h2>
+
+            <span class="group">
+                <label for="investorId">Investor ID </label>
+                <input type="text" id="investorId" placeholder="Введите ID инвестора" required>
+                <span id="qr-scanner">or use camera</span>
+            </span>
+
+
+
+
+            <button id="scanButton" class="main-btn btn">Search</button>
+
+            <a href="../index.html" class="secondary-btn btn" style="margin-top: 20px;">
+                Назад (Главное меню)
+            </a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('scanButton').addEventListener('click', () => {
+            const id = document.getElementById('investorId').value;
+            if (id) {
+                window.location.href = `./scannedResults.html?id=${id}`;
+            } else {
+                alert('Пожалуйста, введите ID.');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</body>
+
+</html>

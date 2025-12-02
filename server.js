@@ -71,7 +71,8 @@ http
         const body = await parseData(request);
         // working data from db
         const result = await pool.query(
-          `INSERT INTO startups (name, website, industries, stages, contact_email, contact_name, photo_url) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
+          `INSERT INTO startups (name, website, industries, stages, contact_email, contact_name, photo_url) 
+          VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
           [
             body.name,
             body.website,
@@ -124,7 +125,7 @@ http
           (SELECT COUNT(*) FROM unnest(stages) AS s WHERE s = ANY($2::text[]))) AS match_score 
           FROM startups 
           WHERE industries && $1::text[] OR stages && $2::text[] 
-          ORDER BY match_score DESC, meeting_count ASC LIMIT 3`,
+          ORDER BY  meeting_count ASC, match_score DESC LIMIT 3`,
           [investor.industries || [], investor.stages || []]
         );
         let finalMatches = matchesResult.rows;
@@ -132,7 +133,8 @@ http
         // Fallback: If less than 3 matches, fill with startups having lowest meeting_count
         if (finalMatches.length < 3) {
           const needed = 3 - finalMatches.length;
-          const existingIds = finalMatches.map((m) => m.id);
+          // do not repeating
+          const existingIds = finalMatches.map((match) => match.id);
 
           let fallbackQuery =
             "SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count FROM startups";
@@ -148,16 +150,11 @@ http
             fallbackParams.length + 1
           }`;
           fallbackParams.push(needed);
-
-          try {
-            const fallbackResult = await pool.query(
-              fallbackQuery,
-              fallbackParams
-            );
-            finalMatches = finalMatches.concat(fallbackResult.rows);
-          } catch (fallbackErr) {
-            console.error("Fallback Query Error:", fallbackErr);
-          }
+          const fallbackResult = await pool.query(
+            fallbackQuery,
+            fallbackParams
+          );
+          finalMatches = finalMatches.concat(fallbackResult.rows);
         }
         // +1 meeting_count
         if (matchesResult.rows.length > 0) {

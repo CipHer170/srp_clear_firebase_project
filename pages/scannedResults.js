@@ -17,11 +17,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           "<p>Ошибка: Инвестор с таким ID не найден.</p>";
         return;
       }
-      throw new Error(`Server returned status: ${response.status}`);
     }
 
     const data = await response.json();
-    const investor = data.investor; // Получаем данные инвестора
+    const investor = data.investor;
     const matches = data.matches;
 
     if (investorNameSpan && investor.name) {

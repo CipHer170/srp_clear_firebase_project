@@ -3,13 +3,50 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+
 a {
   text-decoration: none;
   color: white;
 }
 
-.btn {
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.main_image {
+  display: flex;
+  height: 100%;
+  width: 50%;
+
+}
+
+.main_image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.registration {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  width: 240px;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
@@ -34,34 +71,6 @@ a {
 .secondary-btn:hover {
   background-color: #77b4b2;
 }
-
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-}
-
-.container img {
-  max-width: 100%;
-  width: 500px;
-  height: auto;
-}
-
-.registration {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 
 /*reg pages */
 .registration_form {
@@ -116,8 +125,7 @@ label {
 
 input[type="text"],
 input[type="url"],
-input[type="email"],
-select {
+input[type="email"] {
   padding: 12px 16px;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
@@ -128,20 +136,10 @@ select {
 
 input[type="text"]:focus,
 input[type="url"]:focus,
-input[type="email"]:focus,
-select:focus {
+input[type="email"]:focus {
   outline: none;
   border-color: #3fcac3;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-}
-
-select {
-  min-height: 120px;
-  cursor: pointer;
-}
-
-select option {
-  padding: 8px;
 }
 
 .group:has(input[type="checkbox"]) {
@@ -171,19 +169,6 @@ input[type="checkbox"]+label {
   margin-right: 16px;
 }
 
-input[type="file"] {
-  padding: 10px;
-  border: 2px dashed #e0e0e0;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-input[type="file"]:hover {
-  border-color: #3fcac3;
-  background: #f8f9fa;
-}
 
 button[type="submit"] {
   color: white;
@@ -197,7 +182,7 @@ button[type="submit"]:active {
   transform: translateY(0);
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .container {
     display: flex;
     justify-content: center;
@@ -205,7 +190,7 @@ button[type="submit"]:active {
     flex-direction: column;
   }
 
-  .container img {
+  .main_image img {
     display: none;
   }
 }

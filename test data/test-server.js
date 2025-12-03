@@ -1,6 +1,6 @@
 let http = require("http");
 const { URL } = require("url");
-const pool = require("./db.js");
+const pool = require("../db.js");
 http
   .createServer(async function (request, response) {
     response.setHeader("Access-Control-Allow-Origin", "*");

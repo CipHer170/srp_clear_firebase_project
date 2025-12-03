@@ -30,10 +30,12 @@
         </div>
     </div>
     <script>
-        document.getElementById('scanButton').addEventListener('click', () => {
-            const id = document.getElementById('investorId').value;
-            if (id) {
-                window.location.href = `./scannedResults.html?id=${id}`;
+        const scanBtn = document.getElementById('scanButton')
+        const id = document.getElementById('investorId')
+        scanBtn.addEventListener('click', (e) => {
+            const idValue = id.value;
+            if (idValue) {
+                window.location.href = `./scannedResults.html?id=${idValue}`;
             } else {
                 alert('Пожалуйста, введите ID.');
             }

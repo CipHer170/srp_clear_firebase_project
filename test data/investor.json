@@ -1,0 +1,533 @@
+{
+  "count": 16,
+  "next": null,
+  "previous": "https://startupbase.uz/api/map/investors/?limit=10",
+  "results": [
+    {
+      "id": 19,
+      "name": "Roman Rimsa",
+      "investor_type": "angel",
+      "short_description": "Private Equity Investor, Tech Entrepreneur.",
+      "industries": [
+        {
+          "id": 30,
+          "name": "AdTech"
+        },
+        {
+          "id": 27,
+          "name": "Travel & Tourism"
+        },
+        {
+          "id": 26,
+          "name": "Social Media & Networking"
+        },
+        {
+          "id": 25,
+          "name": "SaaS"
+        },
+        {
+          "id": 24,
+          "name": "PropTech"
+        },
+        {
+          "id": 23,
+          "name": "Marketing & AdTech"
+        },
+        {
+          "id": 22,
+          "name": "Logistics & Supply Chain Management"
+        },
+        {
+          "id": 21,
+          "name": "LegalTech"
+        },
+        {
+          "id": 20,
+          "name": "InsurTech"
+        },
+        {
+          "id": 19,
+          "name": "HRTech"
+        },
+        {
+          "id": 18,
+          "name": "HealthTech & MedTech"
+        },
+        {
+          "id": 17,
+          "name": "GovTech"
+        },
+        {
+          "id": 16,
+          "name": "Gaming & Entertainment"
+        },
+        {
+          "id": 15,
+          "name": "FinTech"
+        },
+        {
+          "id": 14,
+          "name": "EdTech"
+        },
+        {
+          "id": 13,
+          "name": "E-commerce & Retail Tech"
+        },
+        {
+          "id": 12,
+          "name": "Cybersecurity and Public Safety"
+        },
+        {
+          "id": 11,
+          "name": "ClimateTech & Sustainability"
+        },
+        {
+          "id": 10,
+          "name": "BI & Analytics"
+        },
+        {
+          "id": 9,
+          "name": "AI & ML"
+        },
+        {
+          "id": 8,
+          "name": "AgriTech"
+        }
+      ],
+      "stages": [
+        "seed_",
+        "pre_seed"
+      ],
+      "region": {
+        "id": 389,
+        "name": "Flanders",
+        "country_id": 22,
+        "country_name": "Belgium",
+        "coords": null,
+        "country_coords": {
+          "lat": 50.503887,
+          "long": 4.469936
+        }
+      },
+      "photo": "/media/investors-photos/667194fa14944f2914e38e84_664e06738a29a999ff0b2888_Roman-Rymsha_4.jpeg"
+    },
+    {
+      "id": 17,
+      "name": "Caucasus Ventures",
+      "investor_type": "angel",
+      "short_description": "We are based in Baku. Azerbaijan and focus on investing in the Caucasus, Central Asia, Turkiye, and Eastern Europe. We believe that good founders can be found anywhere and are committed to supporting and empowering entrepreneurial talent in the region.",
+      "industries": [
+        {
+          "id": 30,
+          "name": "AdTech"
+        },
+        {
+          "id": 26,
+          "name": "Social Media & Networking"
+        },
+        {
+          "id": 25,
+          "name": "SaaS"
+        }
+      ],
+      "stages": [
+        "seed_",
+        "pre_seed"
+      ],
+      "region": {
+        "id": 4256,
+        "name": "Tashkent",
+        "country_id": 239,
+        "country_name": "Uzbekistan",
+        "coords": {
+          "lat": 41.312336,
+          "lng": 69.278708
+        },
+        "country_coords": {
+          "lat": 41.377491,
+          "long": 64.585262
+        }
+      },
+      "photo": "/media/investors-photos/photo_2025-03-07_11-42-12_GNewCqC.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Muhammed Bedevi",
+      "investor_type": "angel",
+      "short_description": "ASFA Ventures",
+      "industries": [
+        {
+          "id": 30,
+          "name": "AdTech"
+        },
+        {
+          "id": 27,
+          "name": "Travel & Tourism"
+        },
+        {
+          "id": 26,
+          "name": "Social Media & Networking"
+        },
+        {
+          "id": 25,
+          "name": "SaaS"
+        },
+        {
+          "id": 24,
+          "name": "PropTech"
+        },
+        {
+          "id": 23,
+          "name": "Marketing & AdTech"
+        },
+        {
+          "id": 22,
+          "name": "Logistics & Supply Chain Management"
+        },
+        {
+          "id": 21,
+          "name": "LegalTech"
+        },
+        {
+          "id": 20,
+          "name": "InsurTech"
+        },
+        {
+          "id": 19,
+          "name": "HRTech"
+        },
+        {
+          "id": 18,
+          "name": "HealthTech & MedTech"
+        },
+        {
+          "id": 17,
+          "name": "GovTech"
+        },
+        {
+          "id": 16,
+          "name": "Gaming & Entertainment"
+        },
+        {
+          "id": 15,
+          "name": "FinTech"
+        },
+        {
+          "id": 14,
+          "name": "EdTech"
+        },
+        {
+          "id": 13,
+          "name": "E-commerce & Retail Tech"
+        },
+        {
+          "id": 12,
+          "name": "Cybersecurity and Public Safety"
+        },
+        {
+          "id": 11,
+          "name": "ClimateTech & Sustainability"
+        },
+        {
+          "id": 10,
+          "name": "BI & Analytics"
+        },
+        {
+          "id": 9,
+          "name": "AI & ML"
+        },
+        {
+          "id": 8,
+          "name": "AgriTech"
+        }
+      ],
+      "stages": [
+        "pre_seed",
+        "early_b",
+        "serias_a",
+        "early_a",
+        "seed_",
+        "idea"
+      ],
+      "region": {
+        "id": 3034,
+        "name": "Ar Riyad",
+        "country_id": 196,
+        "country_name": "Saudi Arabia",
+        "coords": null,
+        "country_coords": {
+          "lat": 23.885942,
+          "long": 45.079162
+        }
+      },
+      "photo": "/media/investors-photos/Artboard_38_copy_4.png"
+    },
+    {
+      "id": 23,
+      "name": "Sherzod Gafurov",
+      "investor_type": "angel",
+      "short_description": null,
+      "industries": [
+        {
+          "id": 30,
+          "name": "AdTech"
+        },
+        {
+          "id": 27,
+          "name": "Travel & Tourism"
+        },
+        {
+          "id": 26,
+          "name": "Social Media & Networking"
+        },
+        {
+          "id": 25,
+          "name": "SaaS"
+        },
+        {
+          "id": 24,
+          "name": "PropTech"
+        },
+        {
+          "id": 23,
+          "name": "Marketing & AdTech"
+        },
+        {
+          "id": 22,
+          "name": "Logistics & Supply Chain Management"
+        },
+        {
+          "id": 21,
+          "name": "LegalTech"
+        },
+        {
+          "id": 20,
+          "name": "InsurTech"
+        },
+        {
+          "id": 19,
+          "name": "HRTech"
+        },
+        {
+          "id": 18,
+          "name": "HealthTech & MedTech"
+        },
+        {
+          "id": 17,
+          "name": "GovTech"
+        },
+        {
+          "id": 16,
+          "name": "Gaming & Entertainment"
+        },
+        {
+          "id": 15,
+          "name": "FinTech"
+        },
+        {
+          "id": 14,
+          "name": "EdTech"
+        },
+        {
+          "id": 13,
+          "name": "E-commerce & Retail Tech"
+        },
+        {
+          "id": 12,
+          "name": "Cybersecurity and Public Safety"
+        },
+        {
+          "id": 11,
+          "name": "ClimateTech & Sustainability"
+        },
+        {
+          "id": 10,
+          "name": "BI & Analytics"
+        },
+        {
+          "id": 9,
+          "name": "AI & ML"
+        },
+        {
+          "id": 8,
+          "name": "AgriTech"
+        }
+      ],
+      "stages": [
+        "pre_seed",
+        "early_b",
+        "serias_a",
+        "early_a",
+        "seed_",
+        "idea"
+      ],
+      "region": {
+        "id": 4256,
+        "name": "Tashkent",
+        "country_id": 239,
+        "country_name": "Uzbekistan",
+        "coords": {
+          "lat": 41.312336,
+          "lng": 69.278708
+        },
+        "country_coords": {
+          "lat": 41.377491,
+          "long": 64.585262
+        }
+      },
+      "photo": "/media/investors-photos/image_2025-08-01_14-57-58.png"
+    },
+    {
+      "id": 24,
+      "name": "MFaktor",
+      "investor_type": "angel",
+      "short_description": null,
+      "industries": [
+        {
+          "id": 26,
+          "name": "Social Media & Networking"
+        },
+        {
+          "id": 23,
+          "name": "Marketing & AdTech"
+        },
+        {
+          "id": 14,
+          "name": "EdTech"
+        }
+      ],
+      "stages": [
+        "seed_",
+        "pre_seed"
+      ],
+      "region": {
+        "id": 4256,
+        "name": "Tashkent",
+        "country_id": 239,
+        "country_name": "Uzbekistan",
+        "coords": {
+          "lat": 41.312336,
+          "lng": 69.278708
+        },
+        "country_coords": {
+          "lat": 41.377491,
+          "long": 64.585262
+        }
+      },
+      "photo": "/media/investors-photos/IMG_7850.jpeg"
+    },
+    {
+      "id": 26,
+      "name": "Инвестиционный фонд Tanay VC",
+      "investor_type": "angel",
+      "short_description": "The TANAY VC investment ecosystem is a set of tools for structuring, investing, and developing innovative projects: the Tanay VC Investment Fund, the Siberian, Ural, and Far Eastern Investors Club, the International Mentoring Club, the Eurasia International Investment Academy, the FINMUSTER Investment Platform, the BIG AYIQ Association, and many others.  Areas of activity: Investments in digital and industrial international innovation projects. International technology transfer. M&A Transactions. Venture Learning Program and Accelerator. We are preparing projects for the PRE IPO!",
+      "industries": [
+        {
+          "id": 30,
+          "name": "AdTech"
+        },
+        {
+          "id": 27,
+          "name": "Travel & Tourism"
+        },
+        {
+          "id": 26,
+          "name": "Social Media & Networking"
+        },
+        {
+          "id": 25,
+          "name": "SaaS"
+        },
+        {
+          "id": 24,
+          "name": "PropTech"
+        },
+        {
+          "id": 23,
+          "name": "Marketing & AdTech"
+        },
+        {
+          "id": 22,
+          "name": "Logistics & Supply Chain Management"
+        },
+        {
+          "id": 21,
+          "name": "LegalTech"
+        },
+        {
+          "id": 20,
+          "name": "InsurTech"
+        },
+        {
+          "id": 19,
+          "name": "HRTech"
+        },
+        {
+          "id": 18,
+          "name": "HealthTech & MedTech"
+        },
+        {
+          "id": 17,
+          "name": "GovTech"
+        },
+        {
+          "id": 16,
+          "name": "Gaming & Entertainment"
+        },
+        {
+          "id": 15,
+          "name": "FinTech"
+        },
+        {
+          "id": 14,
+          "name": "EdTech"
+        },
+        {
+          "id": 13,
+          "name": "E-commerce & Retail Tech"
+        },
+        {
+          "id": 12,
+          "name": "Cybersecurity and Public Safety"
+        },
+        {
+          "id": 11,
+          "name": "ClimateTech & Sustainability"
+        },
+        {
+          "id": 10,
+          "name": "BI & Analytics"
+        },
+        {
+          "id": 9,
+          "name": "AI & ML"
+        },
+        {
+          "id": 8,
+          "name": "AgriTech"
+        }
+      ],
+      "stages": [
+        "early_a",
+        "seed_",
+        "pre_seed",
+        "serias_a"
+      ],
+      "region": {
+        "id": 4256,
+        "name": "Tashkent",
+        "country_id": 239,
+        "country_name": "Uzbekistan",
+        "coords": {
+          "lat": 41.312336,
+          "lng": 69.278708
+        },
+        "country_coords": {
+          "lat": 41.377491,
+          "long": 64.585262
+        }
+      },
+      "photo": "/media/investors-photos/cropped.jpg"
+    }
+  ]
+}

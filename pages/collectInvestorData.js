@@ -1,5 +1,6 @@
 const investorForm = document.getElementById("investorForm");
 
+// submitting
 investorForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const investorFullName = document.getElementById("investorName");

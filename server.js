@@ -187,6 +187,16 @@ http
           })
         );
       }
+    }
+    // getting industries
+    else if (method === "GET" && path === "/industries") {
+      // getting data from db
+      const result = await pool.query(
+        "SELECT * FROM industries ORDER BY id DESC"
+      );
+      // working with db to connect front
+      response.writeHead(200, { "Content-Type": "application/json" });
+      response.end(JSON.stringify({ industries: result.rows }));
     } else {
       response.writeHead(404, { "Content-Type": "application/json" });
       response.end(JSON.stringify({ message: "Not Found" }));

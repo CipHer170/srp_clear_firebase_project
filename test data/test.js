@@ -102,3 +102,4 @@ industries: [
     industry: "AgriTech",
   },
 ];
+

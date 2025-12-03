@@ -114,9 +114,9 @@ http
           return;
         }
 
+        //соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
         const investor = investorResult.rows[0];
 
-        //соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
         // matching
         const matchesResult = await pool.query(
           `SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count,

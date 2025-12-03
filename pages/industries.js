@@ -8,12 +8,12 @@ async function getIndustries() {
     const { industries } = await response.json();
     console.log(industries);
 
-    industries.forEach(({ id, industry }) => {
+    industries.map(({ id, industry }) => {
       const industryCheckbox = document.createElement("input");
       (industryCheckbox.type = "checkbox"),
         (industryCheckbox.id = id),
         (industryCheckbox.name = "industry"),
-        (industryCheckbox.value = id);
+        (industryCheckbox.value = industry);
 
       const industryLabel = document.createElement("label");
       (industryLabel.textContent = industry),
@@ -22,7 +22,7 @@ async function getIndustries() {
       const choose = document.createElement("div");
       choose.appendChild(industryCheckbox);
       choose.appendChild(industryLabel);
-      allIndustries.appendChild(choose);
+      return allIndustries.appendChild(choose);
     });
   } catch {
     alert(err);

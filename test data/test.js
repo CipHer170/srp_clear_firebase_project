@@ -1,17 +1,38 @@
 results: [
   {
-    id: 132,
-    name: "DreamSat",
-    logo: "/media/logos/DreamSat.png",
-    image: "/media/backgroun-images/11.png",
-    short_description: null,
-    description:
-      "DreamSat is an innovative educational initiative dedicated to inspiring and equipping the next generation of engineers and space enthusiasts in Uzbekistan. The project focuses on hands-on learning in satellite technology, enabling students to design, build, and launch CubeSats and other space-related systems.  \r\n\r\nThrough DreamSat, participants gain practical experience in aerospace engineering, electronics, programming, and mission planning, fostering a deeper understanding of space exploration. By collaborating with universities, research institutions, and industry leaders, DreamSat aims to bridge the gap between theoretical knowledge and real-world applications, empowering students to contribute to Uzbekistan’s growing space sector.  \r\n\r\nDreamSat is more than just a project—it is a movement to cultivate scientific curiosity, technological innovation, and a passion for space among young minds. 🚀",
-    industry: {
-      id: 14,
-      name: "EdTech",
+    id: 19,
+    name: "Roman Rimsa",
+    investor_type: "angel",
+    short_description: "Private Equity Investor, Tech Entrepreneur.",
+    industries: [
+      {
+        id: 30,
+        name: "AdTech",
+      },
+    ],
+    stages: ["seed_", "pre_seed"],
+    region: {
+      id: 389,
+      name: "Flanders",
+      country_id: 22,
+      country_name: "Belgium",
+      coords: null,
+      country_coords: {
+        lat: 50.503887,
+        long: 4.469936,
+      },
     },
-    stage: "early_b",
+    photo:
+      "/media/investors-photos/667194fa14944f2914e38e84_664e06738a29a999ff0b2888_Roman-Rymsha_4.jpeg",
+  },
+];
+
+myDbStructure: [
+  {
+    id: 12,
+    name: contactName,
+    industries:industries,
+    
   },
 ];
 
@@ -102,4 +123,3 @@ industries: [
     industry: "AgriTech",
   },
 ];
-

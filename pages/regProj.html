@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/style.css">
+    <!-- <link rel="stylesheet" href="../../style/style.css">
+      -->
+
+    <link rel="stylesheet" href="../style/generatedStyling.css">
+
     <title>Document</title>
 </head>
 
@@ -23,20 +27,23 @@
             <div class="form">
                 <h2>Project Registration Form</h2>
                 <form id="projectForm">
-                    <span class="group">
+                    <div class="main-info">
 
-                        <label for="Name">Organization Name</label>
-                        <input type="text" placeholder="project name" id="projectName">
-                    </span>
-                    <span class="group">
+                        <span class="group">
+                            <label for="Name">Project Details</label>
+                            <input type="text" placeholder="project name" id="projectName">
+                            <!-- <label for="website">Website</label> -->
+                            <input type="url" id="projectUrl" placeholder="Website URL">
+                        </span>
 
-                        <label for="website">Website</label>
-                        <input type="url" id="projectUrl" placeholder="Website URL">
-                    </span>
-                    <span class="group" id="allIndustries">
+                        <span class="group">
+                            <label for="email">Project Contact</label>
+                            <input type="text" placeholder="Full Name" id="projectContactName" required>
+                            <input type="email" id="projectEmail" placeholder="Email" required>
+                        </span>
+                    </div>
 
-
-
+                    <span class="group industries" id="allIndustries">
                     </span>
                     <span class="group">
                         <label>Choose stage</label>
@@ -48,12 +55,10 @@
                         <label for="mvp">MVP Stage</label>
                         <input type="checkbox" id="release" value="release" name="stage">
                         <label for="release">Release Stage</label>
+                        <input type="checkbox" id="growth" value="growth" name="stage">
+                        <label for="growth">Growth Stage</label>
                     </span>
-                    <span class="group">
-                        <label for="email">Project Contact</label>
-                        <input type="email" id="projectEmail" placeholder="Email" required>
-                        <input type="text" placeholder="Full Name" id="projectContactName" required>
-                    </span>
+
                     <!-- <span class="group">
 
                         <label for="photo">Upload Photo</label>

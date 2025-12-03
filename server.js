@@ -32,7 +32,7 @@ http
         const body = await parseData(request);
         // working data from db
         const result = await pool.query(
-          `INSERT INTO organizations (name, website, industries, stages, contact_email, contact_name, photo_url) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
+          `INSERT INTO organizations (name, website, industries, stages, contact_email, contact_name, investortype, photo_url) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
           [
             body.name,
             body.website,

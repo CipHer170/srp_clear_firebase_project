@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/style.css">
+    <!-- <link rel="stylesheet" href="../../style/style.css"> -->
+    <link rel="stylesheet" href="../style/generatedStyling.css">
+
     <title>Document</title>
 </head>
 
@@ -33,9 +35,15 @@
                         <label for="website">Website</label>
                         <input type="url" id="organizationUrl" placeholder="Website URL">
                     </span>
-                    <span class="group" id="allIndustries">
 
-                    </span>
+                    <span class="group" id="allIndustries"></span>
+                    <!-- <span class="group" id="allTypes">
+                        <label>Choose type</label>
+                        <input type="radio" id="angel" value="angel" name="investorType">
+                        <label for="angel">Angel</label>
+                        <input type="radio" id="venture" value="venture" name="investorType">
+                        <label for="venture">Venture</label>
+                    </span> -->
                     <span class="group">
                         <label>Choose stage</label>
                         <input type="checkbox" id="idea" value="idea" name="stage">
@@ -46,6 +54,8 @@
                         <label for="mvp">MVP Stage</label>
                         <input type="checkbox" id="release" value="release" name="stage">
                         <label for="release">Release Stage</label>
+                        <input type="checkbox" id="growth" value="growth" name="stage">
+                        <label for="growth">Growth Stage</label>
                     </span>
                     <span class="group">
                         <label for="email">Organization Contact</label>

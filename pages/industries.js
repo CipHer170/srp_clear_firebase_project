@@ -20,6 +20,7 @@ async function getIndustries() {
         (industryLabel.htmlFor = id),
         (industryLabel.className = "no-select");
       const choose = document.createElement("div");
+      choose.className = "industry";
       choose.appendChild(industryCheckbox);
       choose.appendChild(industryLabel);
       return allIndustries.appendChild(choose);

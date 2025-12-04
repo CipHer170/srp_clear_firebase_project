@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/style.css">
+    <!-- <link rel="stylesheet" href="../../style/style.css"> -->
+    <link rel="stylesheet" href="../style/generatedStyling.css">
+
     <title>Document</title>
 </head>
 
@@ -16,60 +18,55 @@
         </div>
         <div class="registration_form">
             <div class="navigation">
-
                 <a href="../index.html" class="secondary-btn btn">
                     Back </a>
             </div>
             <div class="form">
                 <h2>Investor Registration Form</h2>
-                <form action="" id="investorForm">
-                    <span class="group">
+                <form id="investorForm">
+                    <div class="main-info">
+                        <span class="group">
+                            <label for="Name">Organization Details</label>
+                            <input type="text" placeholder="Organization name" id="organizationName">
+                            <input type="url" id="organizationUrl" placeholder="Website URL">
+                        </span>
+                        <span class="group">
+                            <label for="email">Organization Contact</label>
+                            <input type="email" id="investorEmail" placeholder="Email" required>
+                            <input type="text" placeholder="Name" id="investorName" required>
+                        </span>
+                    </div>
+                    <div class="detailed-info">
 
-                        <label for="Name">Organization Name</label>
-                        <input type="text" placeholder="Organization name" id="organizationName">
-                    </span>
-                    <span class="group">
+                        <label>Choose Industry</label>
+                        <span class="group allIndustries" id="allIndustries"></span>
 
-                        <label for="website">Website</label>
-                        <input type="url" id="organizationUrl" placeholder="Website URL">
-                    </span>
-                    <span class="group">
-
-                        <input type="checkbox" id="healthcare" value="healthcare" name="industry">
-                        <label for="healthcare">Healthcare</label>
-
-                        <input type="checkbox" id="education" value="education" name="industry">
-                        <label for="education">Education</label>
-
-                        <input type="checkbox" id="finance" value="finance" name="industry">
-                        <label for="finance">Finance</label>
-
-                        <input type="checkbox" id="entertainment" value="entertainment" name="industry">
-                        <label for="entertainment">Entertainment</label>
-
-                        <input type="checkbox" id="ai" value="ai" name="industry">
-                        <label for="ai">AI</label>
-
-                        <input type="checkbox" id="technology" value="technology" name="industry">
-                        <label for="technology">Technology</label>
-
-                    </span>
-                    <span class="group">
                         <label>Choose stage</label>
-                        <input type="checkbox" id="idea" value="idea" name="stage">
-                        <label for="idea">Idea Stage</label>
-                        <input type="checkbox" id="prototype" value="prototype" name="stage">
-                        <label for="prototype">Prototype Stage</label>
-                        <input type="checkbox" id="mvp" value="mvp" name="stage">
-                        <label for="mvp">MVP Stage</label>
-                        <input type="checkbox" id="release" value="release" name="stage">
-                        <label for="release">Release Stage</label>
-                    </span>
-                    <span class="group">
-                        <label for="email">Organization Contact</label>
-                        <input type="email" id="investorEmail" placeholder="Email" required>
-                        <input type="text" placeholder="Name" id="investorName" required>
-                    </span>
+                        <span class="group allStages">
+                            <span>
+
+                                <input type="checkbox" id="idea" value="idea" name="stage">
+                                <label for="idea">Idea Stage</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="seed" value="pre_seed" name="stage">
+                                <label for="pre_seed">Pre_seed Stage</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="seed" value="seed" name="stage">
+                                <label for="seed">Seed Stage</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="early_a" value="early_a" name="stage">
+                                <label for="early_a">Early_a Stage</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="early_b" value="early_b" name="stage">
+                                <label for="early_b">Early_b Stage</label>
+                            </span>
+                        </span>
+                    </div>
+
                     <!-- <span class="group">
 
                         <label for="photo">Upload Photo</label>
@@ -87,7 +84,19 @@
 </body>
 <script src="./collectInvestorData.js">
 </script>
+<script src="./industries.js">
+</script>
 
 </html>
 
 </html>
+
+
+<!-- idea for future updates
+                     <span class="group" id="allTypes">
+                        <label>Choose type</label>
+                        <input type="radio" id="angel" value="angel" name="investorType">
+                        <label for="angel">Angel</label>
+                        <input type="radio" id="venture" value="venture" name="investorType">
+                        <label for="venture">Venture</label>
+                    </span> -->

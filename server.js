@@ -32,7 +32,8 @@ http
         const body = await parseData(request);
         // working data from db
         const result = await pool.query(
-          `INSERT INTO organizations (name, website, industries, stages, contact_email, contact_name, photo_url) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
+          `INSERT INTO organizations (name, website, industries, stages, contact_email, contact_name, investortype, photo_url) 
+          VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`,
           [
             body.name,
             body.website,
@@ -41,6 +42,7 @@ http
             body.contactEmail,
             body.contactName,
             body.photoUrl,
+            body.investorType,
           ]
         );
         response.writeHead(201, { "Content-Type": "application/json" });
@@ -114,9 +116,9 @@ http
           return;
         }
 
+        //соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
         const investor = investorResult.rows[0];
 
-        //соответствующий 2 индустриям инвестора, должен быть выше стартапа, соответствующего 1 индустрии.
         // matching
         const matchesResult = await pool.query(
           `SELECT id, name, website, industries, stages, contact_name, contact_email, meeting_count,
@@ -187,6 +189,16 @@ http
           })
         );
       }
+    }
+    // getting industries
+    else if (method === "GET" && path === "/industries") {
+      // getting data from db
+      const result = await pool.query(
+        "SELECT * FROM industries ORDER BY id DESC"
+      );
+      // working with db to connect front
+      response.writeHead(200, { "Content-Type": "application/json" });
+      response.end(JSON.stringify({ industries: result.rows }));
     } else {
       response.writeHead(404, { "Content-Type": "application/json" });
       response.end(JSON.stringify({ message: "Not Found" }));

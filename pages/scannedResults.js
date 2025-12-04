@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const matchesContainer = document.getElementById("matches-container");
-  const investorNameSpan = document.getElementById("investor-name");
+  const recommendInvestorName = document.getElementById("investor-name");
+  const recommendInvestorStage = document.getElementById("investor-stage");
+  const recommendInvestorIndustries = document.getElementById(
+    "investor-industries"
+  );
 
   const urlParams = new URLSearchParams(window.location.search);
   const investorId = urlParams.get("id");
@@ -23,8 +27,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const investor = data.investor;
     const matches = data.matches;
 
-    if (investorNameSpan && investor.name) {
-      investorNameSpan.textContent = investor.name;
+    if (recommendInvestorName && investor.name) {
+      recommendInvestorName.textContent = `Name: ${investor.name}`;
+    }
+    if (recommendInvestorStage && investor.stages) {
+      recommendInvestorStage.textContent = `Stage: ${investor.stages}`;
+    }
+    if (recommendInvestorIndustries && investor.name) {
+      recommendInvestorIndustries.textContent = `Industries: ${investor.industries}`;
     }
 
     if (matches.length === 0) {

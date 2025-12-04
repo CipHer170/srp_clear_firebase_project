@@ -6,6 +6,7 @@ projectForm.addEventListener("submit", async (e) => {
   const projectName = document.getElementById("projectName");
   const projectUrl = document.getElementById("projectUrl");
   const projectEmail = document.getElementById("projectEmail");
+  const projectDescription = document.getElementById("projectDescription");
   const projectContactName = document.getElementById("projectContactName");
   const industryCheckboxes = Array.from(
     document.querySelectorAll('input[name="industry"]:checked')
@@ -22,6 +23,7 @@ projectForm.addEventListener("submit", async (e) => {
     industries: industryCheckboxes,
     stages: stageCheckboxes,
     photoUrl: null,
+    description: projectDescription.value,
   };
 
   try {

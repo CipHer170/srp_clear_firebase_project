@@ -1,5 +1,6 @@
 const investorForm = document.getElementById("investorForm");
 
+// submitting
 investorForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const investorFullName = document.getElementById("investorName");
@@ -23,6 +24,7 @@ investorForm.addEventListener("submit", async (e) => {
     industries: industryCheckboxes,
     stages: stageCheckboxes,
     photoUrl: null,
+    investorType: null,
   };
 
   try {
@@ -35,6 +37,8 @@ investorForm.addEventListener("submit", async (e) => {
     });
 
     const data = await response.json();
+    console.log(data);
+
     const regNewInvestor = data.receivedData.id;
 
     window.location.href = `./scannedResults.html?id=${regNewInvestor}`;

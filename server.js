@@ -3,13 +3,6 @@ const { URL } = require("url");
 const pool = require("./db.js");
 http
   .createServer(async function (request, response) {
-    response.setHeader("Access-Control-Allow-Origin", "*");
-    response.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PUT, DELETE, OPTIONS"
-    );
-    response.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
     if (request.method === "OPTIONS") {
       response.writeHead(200);
       response.end();

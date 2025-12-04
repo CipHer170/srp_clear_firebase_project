@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2>${startup.name}</h2>
                 <p>Industry: ${startup.industries.join(", ")}</p>
                 <p>Stage: ${startup.stages.join(", ")}</p>
-                <div class="stamp">место для печати был/небыл</div>
+                <div class="stamp">Place for stamp</div>
             `;
       matchesContainer.appendChild(card);
     });

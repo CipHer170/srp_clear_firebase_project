@@ -34,12 +34,15 @@ projectForm.addEventListener("submit", async (e) => {
       },
       body: JSON.stringify(formProjectData),
     });
-    const data = await response.json();
-    console.log("Luck");
-    console.log("Data", data);
-    console.log("Formdata", formProjectData);
+
+    // notification
+    if (response.ok) {
+      const notification = document.createElement("div");
+      notification.textContent = "Saved successfully!";
+      document.body.appendChild(notification);
+    }
+    // obnovleniye form
     projectForm.reset();
-    console.log("Formdata", formProjectData);
   } catch (error) {
     console.error("Error:", error);
   }

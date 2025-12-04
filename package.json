@@ -1,0 +1,17 @@
+{
+  "name": "srp-firebase-project",
+  "version": "1.0.0",
+  "description": "Node.js backend server for startup-investor matching",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

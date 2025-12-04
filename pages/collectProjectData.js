@@ -34,16 +34,31 @@ projectForm.addEventListener("submit", async (e) => {
       },
       body: JSON.stringify(formProjectData),
     });
-
-    // notification
-    if (response.ok) {
-      const notification = document.createElement("div");
-      notification.textContent = "Saved successfully!";
-      document.body.appendChild(notification);
-    }
+    const data = await response.json();
+    const projectName = data.receivedData.name;
+    // notification about success
+    showNotification(`Saved successfully! ${projectName} `, "success");
     // obnovleniye form
     projectForm.reset();
   } catch (error) {
+    // notification about error
+    showNotification(`Error: ${error}`, "error");
     console.error("Error:", error);
   }
 });
+
+function showNotification(message, type) {
+  const notification = document.createElement("div");
+  notification.className = "notification";
+  notification.textContent = message;
+  document.body.appendChild(notification);
+  if (type === "success") {
+    notification.style.backgroundColor = "#10b981";
+  } else {
+    notification.style.backgroundColor = "#ef4444";
+  }
+  // Remove after 3 seconds
+  setTimeout(() => {
+    setTimeout(() => notification.remove(), 300);
+  }, 3000);
+}

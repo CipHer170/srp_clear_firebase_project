@@ -41,8 +41,8 @@ http
             body.stages,
             body.contactEmail,
             body.contactName,
-            body.photoUrl,
             body.investorType,
+            body.photoUrl,
           ]
         );
         response.writeHead(201, { "Content-Type": "application/json" });
@@ -53,6 +53,7 @@ http
         );
       } catch (err) {
         console.log("post err", err);
+        response.writeHead(500, { "Content-Type": "application/json" });
         response.end(
           JSON.stringify({
             error: "Server error",
@@ -73,8 +74,8 @@ http
         const body = await parseData(request);
         // working data from db
         const result = await pool.query(
-          `INSERT INTO startups (name, website, industries, stages, contact_email, contact_name, photo_url) 
-          VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
+          `INSERT INTO startups (name, website, industries, stages, contact_email, contact_name, photo_url,description) 
+          VALUES ($1, $2, $3, $4, $5, $6, $7,$8) RETURNING *`,
           [
             body.name,
             body.website,
@@ -83,6 +84,7 @@ http
             body.contactEmail,
             body.contactName,
             body.photoUrl,
+            body.description,
           ]
         );
         response.writeHead(201, { "Content-Type": "application/json" });
@@ -99,6 +101,7 @@ http
             details: err.message,
           })
         );
+        return;
       }
     } // GET найти 3 подходящих стартапа для инвестора
     else if (method === "GET" && path.match(/^\/matches\/\d+$/)) {

@@ -32,10 +32,8 @@
                         <span class="group">
                             <label for="Name">Project Details</label>
                             <input type="text" placeholder="project name" id="projectName">
-                            <!-- <label for="website">Website</label> -->
                             <input type="url" id="projectUrl" placeholder="Website URL">
                         </span>
-
                         <span class="group">
                             <label for="email">Project Contact</label>
                             <input type="text" placeholder="Full Name" id="projectContactName" required>
@@ -45,22 +43,38 @@
                     <div class="detailed-info">
 
                         <label>Choose Industry</label>
-                        <span class="group industries" id="allIndustries">
+                        <span class="group allIndustries" id="allIndustries">
                         </span>
                         <label>Choose stage</label>
-                        <span class="group">
-                            <input type="checkbox" id="idea" value="idea" name="stage">
-                            <label for="idea">Idea Stage</label>
-                            <input type="checkbox" id="prototype" value="prototype" name="stage">
-                            <label for="prototype">Prototype Stage</label>
-                            <input type="checkbox" id="mvp" value="mvp" name="stage">
-                            <label for="mvp">MVP Stage</label>
-                            <input type="checkbox" id="release" value="release" name="stage">
-                            <label for="release">Release Stage</label>
-                            <input type="checkbox" id="growth" value="growth" name="stage">
-                            <label for="growth">Growth Stage</label>
-                        </span>
+                        <span class="group allStages">
+                            <span>
 
+                                <input type="checkbox" id="idea" value="idea" name="stage">
+                                <label for="idea">Idea Stage</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="seed" value="pre_seed" name="stage">
+                                <label for="pre_seed">Pre_seed</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="seed" value="seed" name="stage">
+                                <label for="seed">Seed</label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="early_a" value="early_a" name="stage">
+                                <label for="early_a">Early_a </label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="early_b" value="early_b" name="stage">
+                                <label for="early_b">Early_b </label>
+                            </span>
+
+                    </div>
+
+                    <div class="projectDescription">
+                        <label for="projectDescription">projectDescription</label>
+                        <textarea name="projectDescription" id="projectDescription"
+                            maxlength=200>projectDescription</textarea>
                     </div>
                     <!-- <span class="group">
 

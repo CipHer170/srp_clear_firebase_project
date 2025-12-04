@@ -1,533 +1,2463 @@
-{
-  "count": 16,
-  "next": null,
-  "previous": "https://startupbase.uz/api/map/investors/?limit=10",
-  "results": [
+// Скопируйте весь этот код и вставьте в консоль браузера (F12)
+
+(async function() {
+  const investorsData = [
     {
-      "id": 19,
-      "name": "Roman Rimsa",
-      "investor_type": "angel",
-      "short_description": "Private Equity Investor, Tech Entrepreneur.",
-      "industries": [
+      "count": 1416,
+      "next": "https://startupbase.uz/api/startups/?limit=100&location=all&offset=100",
+      "previous": null,
+      "results": [
         {
-          "id": 30,
-          "name": "AdTech"
+          "id": 15,
+          "name": "Billz",
+          "logo": "/media/logos/myIcon_1.svg",
+          "image": "/media/backgroun-images/billzpos_cover_fqKpddt.jpg",
+          "short_description": "Ни один",
+          "description": "The program for the store, warehouse accounting of goods and trade automation in Tashkent.",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 27,
-          "name": "Travel & Tourism"
+          "id": 61,
+          "name": "Onlayn Hamshira",
+          "logo": "/media/logos/Group_47271avatar_insta_2.png",
+          "image": null,
+          "short_description": null,
+          "description": "Organizing essential medical services for the population at the patient's home. Onlayn Hamshira is a platform that connects people in need of medical services with medical professionals. Unemployed or low-paid nurses and other healthcare workers have the opportunity to earn additional income by providing home services to patients in their spare time.",
+          "industry": {
+            "id": 18,
+            "name": "HealthTech & MedTech"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4259,
+            "name": "Fergana",
+            "county": "Uzbekistan",
+            "label": "Fergana",
+            "lat": "40.398365",
+            "long": "71.787557"
+          },
+          "is_verified": true,
+          "digital_startup_awards_participant": true,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 49,
+          "name": "Akam",
+          "logo": "/media/logos/IMG_0315.PNG",
+          "image": null,
+          "short_description": "Akam is an AI-powered EdTech app helping students find their major, explore universities, take mock exams, and get personalized learning — used by 150K+ students with 200K+ downloads.",
+          "description": "Akam is an AI-powered EdTech platform that guides students from school to university. With 150K+ users and 200K+ downloads, Akam helps students discover their best-fit major through psychology-based tests, explore matching universities, take entrance mock exams, and apply — all in one place. The platform combines gamification, AI tracking, subject-based communities, and personalized courses, making learning both effective and engaging. Akam also supports universities through targeted lead generation and direct application integration.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4262,
+            "name": "Navoi",
+            "county": "Uzbekistan",
+            "label": "Navoi",
+            "lat": "42.000000",
+            "long": "64.000000"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 96,
+          "name": "UYSOT",
+          "logo": "/media/logos/uysot_logo3x_GP8K79R.png",
+          "image": null,
+          "short_description": null,
+          "description": "UYSOT is a revolutionary platform that empowers real estate developers with a tailored CRM and an integrated marketplace. We digitalize the entire customer journey, from lead generation to key handover, boosting sales by up to 30%. Our platform also simplifies the home-buying process for customers, helping them find their dream homes effortlessly.",
+          "industry": {
+            "id": 24,
+            "name": "PropTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4262,
+            "name": "Navoi",
+            "county": "Uzbekistan",
+            "label": "Navoi",
+            "lat": "42.000000",
+            "long": "64.000000"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 77,
+          "name": "Karmon AI",
+          "logo": "/media/logos/icon.png",
+          "image": null,
+          "short_description": "Karmon AI: Your universal tool for budgeting, expense tracking, and loan management with AI-powered insights.",
+          "description": "Karmon AI is a modern personal finance management app tailored for users in emerging markets, starting with Uzbekistan. It helps individuals track income, expenses, and budgets across cash and bank accounts (Uzcard, HUMO, Visa), with real-time sync and AI-powered categorization. Users can log transactions manually or through voice, images, or receipts using our Telegram bot or Karmon Eye OCR tool. The app also offers smart budgeting tools, shared finance management, peer-to-peer loan tracking with reminders, goal setting, and an Islamic Zakat calculator. With mobile and web access, Karmon AI delivers a secure, localized, and intelligent solution for everyday money management.",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": true,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 48,
+          "name": "TASS Vision, Inc.",
+          "logo": "/media/logos/IMG_0008.png",
+          "image": null,
+          "short_description": null,
+          "description": "in-store analytics tool for offline retailers to track and analyze customer and product data in real time using AI and Machine Vision",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": true,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 108,
+          "name": "Edfix",
+          "logo": "/media/logos/Artboard_1_13.png",
+          "image": null,
+          "short_description": "Distance learning is a platform for learning professions and skills. They are mainly specialized in IT fields.",
+          "description": "Distance learning is a platform for learning professions and skills. They are mainly specialized in IT fields.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 40,
+          "name": "1Way",
+          "logo": "/media/logos/1Way_Logo.png",
+          "image": null,
+          "short_description": "Raydshering mobil ilovasi",
+          "description": "1Way is a ride-sharing platform connecting a driver and a passenger traveling to one destination in Tashkent.\r\n\r\nJust 7 days after launch in Tashkent, we saw an amazing traction:\r\n\r\n4,000 customers registered\r\n2 thousand drivers registered\r\n3,700 orders received\r\nOnly $1000 was spent on marketing and all operations",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 82,
+          "name": "Speaklish",
+          "logo": "/media/logos/speaklish_280_280.png",
+          "image": null,
+          "short_description": null,
+          "description": "Speaklish is an AI-powered IELTS speaking evaluator that helps students improve their English speaking skills by providing in-depth speech analysis and personalized feedback. The platform aims to offer affordable and accessible practice for the IELTS speaking exam, utilizing AI to evaluate speaking skills, enhance fluency, and build confidence. Speaklish provides tailored skill development plans, practice speaking sessions, and interactive workshops. It has a user base of over 50,000 organic users. Speaklish won 2nd place in the President Tech Awards, receiving $50,000 in the AI in EdTech field and received $15,000 from the WERISE accelerator. The company also has investments from Google Startups. Speaklish is led by Boburjon Mardonov (CTO) and Jasmina Anorova (CPO), and is expanding throughout Uzbekistan, partnering with different schools, with plans to expand into the MENA and EU markets.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 58,
+          "name": "Stepogram",
+          "logo": "/media/logos/IMG_0175.png",
+          "image": null,
+          "short_description": null,
+          "description": "Stepogram - application that motivates people to walk on a daily basis by gamification, social component, coupons",
+          "industry": {
+            "id": 18,
+            "name": "HealthTech & MedTech"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": false,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 89,
+          "name": "The Rise of Jaloliddin",
+          "logo": "/media/logos/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA1.png",
+          "image": "/media/backgroun-images/photo_2025-01-30_12-03-55.jpg",
+          "short_description": null,
+          "description": "Historical RPG set in the 1200s, following Jaloliddin Manguberdi’s fight against the Mongol invasion. Engage in intense battles, explore vast lands, and shape history through strategic choices",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 53,
+          "name": "diip.uz",
+          "logo": "/media/logos/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2024-03-19_%D0%B2_13.54.25.png",
+          "image": null,
+          "short_description": null,
+          "description": "Diip.uz is an innovative logistics platform revolutionizing the trucking industry by connecting load owners, truck owners, and dispatchers through an all-in-one ecosystem. With features like real-time tracking, financial analytics, and automated load recommendations, Diip.uz simplifies logistics operations, enhances trust, and maximizes profitability.\r\n\r\nWe bridge the gap between fragmented markets, offering verified users, seamless communication, and dynamic pricing systems. By leveraging cutting-edge technology and data-driven insights, Diip.uz delivers efficiency, transparency, and scalability for the logistics industry across Central Asia and beyond.",
+          "industry": {
+            "id": 22,
+            "name": "Logistics & Supply Chain Management"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4268,
+            "name": "Khorezm region",
+            "county": "Uzbekistan",
+            "label": "Khorezm region",
+            "lat": "41.290284",
+            "long": "60.542854"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 110,
+          "name": "AIsha AI",
+          "logo": "/media/logos/Frame_2087327008.png",
+          "image": null,
+          "short_description": null,
+          "description": "AIsha AI is AI-based phone-calling infrastructure for businesses. We are implementing AI agents in Uzbek, Russian and English languages. \r\nCurrently providing AI analytics for call centres.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": true,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 99,
+          "name": "Lalu",
+          "logo": "/media/logos/logo_7_1-photoaidcom-2x-ai-zoom_2.png",
+          "image": null,
+          "short_description": "Mobile platform for pregnant women and young mothers A place to find reliable information and monitor health during pregnancy and childcare.",
+          "description": "Mobile platform for pregnant women and young mothers\r\nA place to find reliable information and monitor health during pregnancy and childcare.",
+          "industry": {
+            "id": 18,
+            "name": "HealthTech & MedTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4262,
+            "name": "Navoi",
+            "county": "Uzbekistan",
+            "label": "Navoi",
+            "lat": "42.000000",
+            "long": "64.000000"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 109,
+          "name": "TUZUK",
+          "logo": "/media/logos/logo-full.png",
+          "image": null,
+          "short_description": null,
+          "description": "A digital platform based on artificial intelligence that provides access to the legislative framework of the Republic of Uzbekistan. This platform enables each user to quickly search for and comprehensively analyze regulatory legal acts for the effective resolution of legal issues.",
+          "industry": {
+            "id": 21,
+            "name": "LegalTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 80,
+          "name": "Jobster.hr",
+          "logo": "/media/logos/Jlogo.png",
+          "image": null,
+          "short_description": null,
+          "description": "Jobster.hr is an Applicant Tracking System (ATS) tailored for efficient recruitment, excels in simplifying bulk and targeted hiring for employers. It automates processes like job posting, resume screening, testing, and interview scheduling. Already, 70+ companies trust Jobster as their primary ATS, a testament to its effectiveness in streamlining recruitment.",
+          "industry": {
+            "id": 19,
+            "name": "HRTech"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 123,
+          "name": "EduCompass",
+          "logo": "/media/logos/Frame_1.png",
+          "image": "/media/backgroun-images/Slide_16_9_-_13.png",
+          "short_description": "Ни один",
+          "description": "EduCompas is an innovative educational platform designed to simplify the search and selection of educational courses. The project's goal is to help students and learners quickly find suitable courses in educational centers, compare them, and enroll in training. The platform allows users to search for courses by category, filter by location and other criteria, and receive personalized recommendations based on their knowledge level.\r\n\r\nWith EduCompas, educational centers can promote their courses, effectively engage with potential students, and increase enrollments. Centers can manage their courses, add branches, publish events, and update information about available spots. This simplifies the course search process for students and helps educational institutions reach their target audience.\r\n\r\nThe system includes a testing module that allows users to determine their current knowledge level and receive course recommendations accordingly. The platform also supports event management, enabling educational centers to publish announcements about upcoming events and seminars.\r\n\r\nEduCompas aims to create a unified space for interaction between educational institutions and learners, providing access to a full range of educational opportunities in one place. This makes the course search process more convenient and educational centers more accessible and visible to students.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4257,
+            "name": "Andijon",
+            "county": "Uzbekistan",
+            "label": "Andijon",
+            "lat": "40.783347",
+            "long": "72.350675"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 32,
+          "name": "Robosell",
+          "logo": "/media/logos/%D0%9B%D0%BE%D0%B3%D0%BE.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Robosell is a platform for fast online business startup that combines all key tools in one solution.\r\n\r\nWith Robosell, entrepreneurs receive a Telegram bot, a website, and an admin panel for order automation, sales management, and operations control in just 1 day. We easily integrate with payment services, delivery, warehouse accounting and POS systems, making business processes convenient and transparent.\r\n\r\nWhy invest in Robosell?\r\n- A unique solution for the growing market of Uzbekistan and, in the future, the entire CIS, where digitalization is becoming critically important for small and medium-sized businesses.\r\n- Rapid growth: more than 100+ active customers, scalable architecture and plans to enter international markets.\r\n- Functional expansion: the introduction of artificial intelligence and new integrations that increase efficiency and customer sales.\r\n\r\nRobosell is a game—changing tool for entrepreneurs, making the transition online simple and affordable, and business management efficient and profitable.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 57,
+          "name": "1doc.uz",
+          "logo": "/media/logos/1doc_logo_T56RbOh.png",
+          "image": "/media/backgroun-images/doc_1_uz_phone_2_IReJVL3.jpg",
+          "short_description": null,
+          "description": "Borderless AI document platform that *auto-adapts* to global laws. Create, edit, sign, and share compliant docs in seconds with 3K+ templates, OCR, PDF tools, AI legal assistant, and bank-grade security. Built for B2B/B2C and SMEs to operate seamlessly across borders",
+          "industry": {
+            "id": 21,
+            "name": "LegalTech"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 142,
+          "name": "ORGANIZM",
+          "logo": "/media/logos/organizm_logo.svg",
+          "image": "/media/backgroun-images/IMG_4464.png",
+          "short_description": null,
+          "description": "Software for self-development",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 29,
+          "name": "Paylov",
+          "logo": "/media/logos/Gradient_2_Ohj6n5P.png",
+          "image": "/media/backgroun-images/Portugal_14.jpg",
+          "short_description": "Ни один",
+          "description": "Paylov is a fintech startup founded in 2022 by a financier and an IT architect with the aim of creating a universal financial ecosystem \"for their own\". In 2022, the company attracted investments from angel investors from South Korea, and launched its operations in December 2023. After just 8 months, the startup reached break-even and attracted more than 100 B2B clients. In 2024, the company transformed into a joint-stock company and issued shares, continuing to actively develop the market.\r\n\r\nPavlov is building an ecosystem that unites:\r\n\r\nComprehensive solutions for payments and cryptocurrencies.\r\nInvestment instruments and P2P payments.\r\nScoring and debt collection systems.\r\nWe create innovative products that simplify financial transactions for users and businesses, and strive to become a leader in the digital finance market. Invest in the future with Pavlov!",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "early_b",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 98,
+          "name": "FOM Group",
+          "logo": "/media/logos/fom_logo.png",
+          "image": null,
+          "short_description": null,
+          "description": "FOM Group is creating an ecosystem of IT products for the entire pharmaceutical market. \r\n\r\n4 main products:\r\nF-Pharmacy - automation of all internal pharmacy processes, from warehouse and shelves to cache machine. \r\nF-Summary - a marketplace between distributors and pharmacies for order fulfillment.\r\nArzonApteka - B2C applications for searching and ordering medicines.\r\nDATFO - analytics platform for manufacturers with predictive models and pharma market information.\r\n\r\nWe are the market leader in Uzbekistan with 60% coverage (7000+ pharmacies) and 3 million users, and already have 200+ pharmacy customers in UAE.",
+          "industry": {
+            "id": 18,
+            "name": "HealthTech & MedTech"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
           "id": 26,
-          "name": "Social Media & Networking"
+          "name": "Jett",
+          "logo": "/media/logos/Jett_logo_black.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Jett investment service is the first startup project in Uzbekistan aimed at investment, which allows small investors to remotely open an investment account in a broker, invest in shares of large companies of Uzbekistan (investing) and trade in securities (trading).",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 25,
-          "name": "SaaS"
+          "id": 133,
+          "name": "Bron24",
+          "logo": "/media/logos/cropped_SDidR2N.jpg",
+          "image": "/media/backgroun-images/Blue_Green_Geometric_Company_LinkedIn_Banner.png",
+          "short_description": "Bron24 is an online platform for renting football fields and other sports facilities.",
+          "description": "Bron24 is an online platform for renting football fields and other sports venues. It allows users to check availability, view prices, and book venues easily. The platform also helps players find and join football teams, create their own teams, and connect with like-minded sports enthusiasts. For venue owners, Bron24 provides tools to manage bookings and monitor venue activity efficiently.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 76,
+          "name": "MilliyPay",
+          "logo": "/media/logos/1000006672.png",
+          "image": null,
+          "short_description": null,
+          "description": "MilliyPay is the fintech solution which can easily transfers money from Russia to Uzbekistan",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4268,
+            "name": "Khorezm region",
+            "county": "Uzbekistan",
+            "label": "Khorezm region",
+            "lat": "41.290284",
+            "long": "60.542854"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 71,
+          "name": "The Arcane Pathways",
+          "logo": "/media/logos/cropped_MbTlUpt.jpg",
+          "image": "/media/backgroun-images/photo_2025-02-04_18-08-09.png",
+          "short_description": "The project is a third-person action-adventure RPG game, Along the way, he solves a series of engaging puzzles, uncovering secrets and advancing through a captivating storyline.",
+          "description": "Mysterious paths\r\nFrom Gale Force Entertainment.\r\n\r\nThe project is a third-person action adventure RPG game based on a bestseller book. Players follow Cornelius's journey, exploring the mysterious world in search of pieces of courage. On this path, he solves a number of interesting puzzles, reveals secrets, and moves forward through an interesting plot.",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 59,
+          "name": "StudentHunter",
+          "logo": "/media/logos/dark2x.png",
+          "image": null,
+          "short_description": null,
+          "description": "StudentHunter is a centralized B2B admission platform that connects universities with students worldwide. It streamlines the enrollment process, helping institutions attract qualified applicants while providing students with easy access to educational opportunities. The platform has successfully partnered with private universities and gained significant traction through organic growth. Recently, StudentHunter signed a contract with about 700 universities around the world including the US, UK, Australia, Canada and many more.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 31,
+          "name": "Sug'urta Bozor",
+          "logo": "/media/logos/sugurta_FzBg8ai.webp",
+          "image": "/media/backgroun-images/back_test_2_JNSOb8i.png",
+          "short_description": "Ни один",
+          "description": "Insurance market. Access to insurance services in the most convenient way for consumers.",
+          "industry": {
+            "id": 20,
+            "name": "InsurTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 127,
+          "name": "Редиска",
+          "logo": "/media/logos/Frame_76.png",
+          "image": "/media/backgroun-images/wherenext-nexttech-dark-stores-wide-1920x1080-1.jpg",
+          "short_description": "Grocery delivery within 15 minutes",
+          "description": "Rediska is a dark store startup designed to revolutionize grocery and daily meal delivery. Operating as an on-demand service, Rediska ensures fast and efficient delivery of essential products within a short radius. The platform will eventually evolve into a superapp, integrating multiple services beyond groceries to enhance convenience for everyday needs. With a focus on speed, affordability, and quality, Rediska aims to redefine the local shopping experience, offering users a seamless way to access fresh food, household essentials, and more—all at their fingertips.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4269,
+            "name": "Republic of Karakalpakstan",
+            "county": "Uzbekistan",
+            "label": "Republic of Karakalpakstan",
+            "lat": "43.773884",
+            "long": "57.623462"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 105,
+          "name": "Giglancer",
+          "logo": "/media/logos/Group_79.png",
+          "image": "/media/backgroun-images/Header_2.jpg",
+          "short_description": null,
+          "description": "A reliable platform for freelancers and buyers. Giglancer for buying and selling online services in Uzbekistan with over 400+ categories across all areas. The platform provides services both in Uzbekistan and for CIS countries.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "expension",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 55,
+          "name": "Romchi",
+          "logo": "/media/logos/Romchi-Logo_2.png",
+          "image": "/media/backgroun-images/Group_1000007710.png",
+          "short_description": null,
+          "description": "Romchi is a platform designed to automate the operations of companies manufacturing doors and windows. It enables precise cost and profit calculations for orders. Users can input the dimensions of windows and doors, select colors, designs, and various other elements, and the platform calculates the order's price within just one second.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 118,
+          "name": "Yuk bor",
+          "logo": "/media/logos/2025-02-19_16.36.10.png",
+          "image": "/media/backgroun-images/IMAGE_2025-02-19_181341.jpg",
+          "short_description": null,
+          "description": "Yuk Bor – An Innovative Solution for Logistics!\r\n📌 Project Goal\r\n\"Yuk Bor\" is a smart platform that connects cargo owners and drivers. Through our mobile and web applications, users can quickly find loads, post orders, and connect with reliable partners effortlessly.\r\n\r\n🚛 Our Solutions\r\n✅ For cargo owners: Easily find available transport and ensure fast delivery\r\n✅ For drivers: Get profitable and verified shipping orders\r\n✅ For companies: Optimize logistics operations and reduce costs\r\n✅ Market analytics: Track pricing and demand in real-time\r\n\r\n💰 Revenue Model\r\n🔹 Commission fees on transactions\r\n🔹 Premium subscriptions and services\r\n🔹 Advertising and partnership programs\r\n\r\n\"Yuk Bor\" solves key logistics challenges by making transportation faster, easier, and more reliable! 🚀",
+          "industry": {
+            "id": 22,
+            "name": "Logistics & Supply Chain Management"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 93,
+          "name": "Cradle AI",
+          "logo": "/media/logos/Logo_Cradle.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Cradle Vision Tech is an AI-powered video analytics startup that delivers end-to-end security, real-time insights, and operational efficiencies. Their product lines address a wide range of sectors—including government (for attendance tracking and defense), retail (customer analytics), enterprise APIs (facial recognition and integration), and consumer security (smart home solutions). By bundling high-accuracy computer vision software with hardware, Cradle Vision Tech simplifies adoption and accelerates ROI for its clients. Led by a team of experienced engineers and AI researchers, the company has established public-sector pilot projects and is poised for global expansion across Central Asia, MENA, and Europe. With a scalable cloud-based infrastructure and proven governmental partnerships, Cradle Vision Tech is well-positioned to capture the growing market for intelligent video analytics.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "early_a",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 70,
+          "name": "SugarBoy",
+          "logo": "/media/logos/1000009175.png",
+          "image": null,
+          "short_description": null,
+          "description": "Sugarboy is indie game that aims to revolutionize gaming industry in Uzbekistan adressing different markets, and combining different cultures to create enjoyable experience for people around the globe",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 74,
+          "name": "LookEmp",
+          "logo": "/media/logos/logo_LookEmp_AUQ6BOl.png",
+          "image": "/media/backgroun-images/photo_2023-01-12_16-37-32.jpg",
+          "short_description": null,
+          "description": "Employee working time tracking. Assistant \r\nHR officer. A specialized program that allows, through the registration of biometric data (fingerprints and face ID) of employees, to automatically record the time spent at work, with the ability to take into account breaks and overtime.",
+          "industry": {
+            "id": 19,
+            "name": "HRTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4264,
+            "name": "Samarkand",
+            "county": "Uzbekistan",
+            "label": "Samarkand",
+            "lat": "39.655002",
+            "long": "66.975695"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 46,
+          "name": "Tezyetkaz",
+          "logo": "/media/logos/logo_OEjMMTP.png",
+          "image": null,
+          "short_description": null,
+          "description": "Tezyetkaz is an app that connects customers and restaurant couriers to create convenience for people.",
+          "industry": {
+            "id": 22,
+            "name": "Logistics & Supply Chain Management"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4265,
+            "name": "Syrdarya",
+            "county": "Uzbekistan",
+            "label": "Syrdarya",
+            "lat": "40.830914",
+            "long": "68.666187"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 65,
+          "name": "Bronme",
+          "logo": "/media/logos/bronmee-02.png",
+          "image": null,
+          "short_description": "Pre-booking and electronic market.",
+          "description": "An electronic platform that allows you to pre-book all services in the service sector, add short-term jobs, and find a job by posting a resume.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4266,
+            "name": "Surkhandarya",
+            "county": "Uzbekistan",
+            "label": "Surkhandarya",
+            "lat": "37.952084",
+            "long": "67.126600"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 45,
+          "name": "findecor.io",
+          "logo": "/media/logos/cropped_1gi3JSU.jpg",
+          "image": null,
+          "short_description": "AI-powered platform that helps young homeowners find home decor from online and offline stores. It analyzes room photos to suggest items that match their style, budget, and space effortlessly.",
+          "description": "Findecor is an AI-powered e-commerce platform that helps young homeowners find and purchase home decor from both online and offline stores.\r\nThe Problem\r\nBrowsing endless product lists from e-commerce platforms or offline stores makes home decor shopping time-consuming and overwhelming. Finding the perfect match for your style, budget, and space requires too much effort.\r\nOur Solution\r\nFindecor simplifies the process by analyzing your room photos and instantly suggesting the best decor that fits your style and budget. Our AI-driven platform connects you with products from both online and nearby stores, reducing search time and making shopping effortless.\r\nWith limitless chat support from our AI agent, you can get personalized recommendations, styling tips, and product suggestions—ensuring you find the perfect home decor with ease.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4169,
+            "name": "California",
+            "county": "United States",
+            "label": "United States",
+            "lat": null,
+            "long": null
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 50,
+          "name": "Vsales",
+          "logo": "/media/logos/cropped_5IjZz0R.jpg",
+          "image": null,
+          "short_description": "VSales-is a mobile application that automates the order collection process, helping users manage their time efficiently and improve customer service quality.",
+          "description": "Optimize your business with our cloud platform\r\n\r\nDear investors!\r\n\r\nWe offer a cloud solution that transforms how companies manage delivery agents, sales representatives, and financial operations.\r\n\r\nOur platform provides real-time geolocation tracking, a customizable system for any work process, a mobile application for field workers, financial transparency, and Telegram bot integration for instant updates.\r\n\r\nWhy invest in us?\r\n\r\nscalable for startups and large enterprises\r\n\r\nHigh demand for logistics and field control\r\n\r\nSafe and reliable architecture\r\n\r\nFlexible for various industries\r\n\r\nOur mission is to become an industry standard in monitoring fieldwork, ensuring efficiency, accountability, and customer satisfaction.\r\n\r\nMuhammad\r\nFounder and CEO",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4264,
+            "name": "Samarkand",
+            "county": "Uzbekistan",
+            "label": "Samarkand",
+            "lat": "39.655002",
+            "long": "66.975695"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
           "id": 24,
-          "name": "PropTech"
+          "name": "Insight",
+          "logo": "/media/logos/Logo_Ins_b.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Insight is an online research panel based on the telegram web app. This is a special platform that allows you to collect and process information received by redirecting (api) data from a bot in a telegram messenger or a web resource.\r\nIt is designed to conduct quantitative online surveys of any complexity. It has been operating in our market since 2023. It is planned to expand the functionality and expand into the global market.",
+          "industry": {
+            "id": 23,
+            "name": "Marketing & AdTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 23,
-          "name": "Marketing & AdTech"
+          "id": 165,
+          "name": "AL-JABR EDU",
+          "logo": "/media/logos/AL-JABR_Logo.png",
+          "image": null,
+          "short_description": "AI-JABR EDU is an AI-powered mathematics learning platform offering personalized courses. Make mathematics accessible and engaging.",
+          "description": "Startup Description: AL-JABR EDU\r\nAL-JABR EDU is an interactive SaaS platform designed to make mathematics education engaging, effective, and personalized for schoolchildren.  Our mission is to provide a convenient technological tool that helps students independently manage the learning process and enhance their motivation.\r\n\r\n\r\nOur platform is equipped with an adaptive diagnostic system to assess the student's initial knowledge level, which then automatically generates a personalized curriculum for daily tasks and exercises.  To maintain user engagement, we have integrated a reliable gamification mechanism with a rating, rewards, and cashback incentive system.  The platform also includes a complete library of content with thousands of mathematical problems and video lessons for all grades.\r\n\r\n\r\n\r\nOur business model is based on a SaaS subscription that provides premium features for both individual users (B2C) and educational partners such as tutoring centers and schools (B2B).  Based in Uzbekistan, we focus on growth, planning to export our services to the markets of Kazakhstan, Kyrgyzstan, and Tajikistan.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 22,
-          "name": "Logistics & Supply Chain Management"
+          "id": 132,
+          "name": "DreamSat",
+          "logo": "/media/logos/DreamSat.png",
+          "image": "/media/backgroun-images/11.png",
+          "short_description": null,
+          "description": "DreamSat is an innovative educational initiative dedicated to inspiring and equipping the next generation of engineers and space enthusiasts in Uzbekistan. The project focuses on hands-on learning in satellite technology, enabling students to design, build, and launch CubeSats and other space-related systems.  \r\n\r\nThrough DreamSat, participants gain practical experience in aerospace engineering, electronics, programming, and mission planning, fostering a deeper understanding of space exploration. By collaborating with universities, research institutions, and industry leaders, DreamSat aims to bridge the gap between theoretical knowledge and real-world applications, empowering students to contribute to Uzbekistan’s growing space sector.  \r\n\r\nDreamSat is more than just a project—it is a movement to cultivate scientific curiosity, technological innovation, and a passion for space among young minds. 🚀",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "early_b",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 21,
-          "name": "LegalTech"
+          "id": 72,
+          "name": "Grimoire Entertainment",
+          "logo": "/media/logos/logo_otPzi5n.png",
+          "image": null,
+          "short_description": null,
+          "description": "Grimoire Entertainment is a game development studio dedicated to crafting immersive experiences for mobile and PC platforms. We develop and publish our own games while also providing professional game development services. Our team prioritizes quality, innovation, and delivering results that meet both player expectations and business objectives.",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": true
         },
         {
-          "id": 20,
-          "name": "InsurTech"
+          "id": 67,
+          "name": "Alipos",
+          "logo": "/media/logos/Artboard-1_3x-100.png",
+          "image": "/media/backgroun-images/Artboard-1_3x-100.png",
+          "short_description": null,
+          "description": "Alipos is an innovative B2B platform that provides comprehensive solutions for automating processes in restaurants. Our system helps establishments improve efficiency, increase profitability and optimize internal processes.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "expension",
+          "region": {
+            "id": 4264,
+            "name": "Samarkand",
+            "county": "Uzbekistan",
+            "label": "Samarkand",
+            "lat": "39.655002",
+            "long": "66.975695"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 19,
-          "name": "HRTech"
+          "id": 140,
+          "name": "Azma Finance",
+          "logo": "/media/logos/Azma_Finance_App_Icon_Grad4x_1.png",
+          "image": "/media/backgroun-images/Notion_cover.jpg",
+          "short_description": null,
+          "description": "Azma Finance is an accounting automation platform designed for small and medium-sized businesses. We simplify the processes of calculating taxes, reporting, and managing financial documents through a convenient Telegram bot interface, web applications, and a mini-application for Telegram & Click.\r\n⠀\r\nOur goal is to make accounting accessible and automated, allowing business owners to focus on the growth of their companies. We help entrepreneurs reduce their time for financial processes, minimize errors, and remain fully secure in tax and financial matters.\r\n⠀\r\nThrough integration with platforms like Click and Yandex Go, as well as through API, we expand user capabilities by offering flexible solutions for small businesses, startups, and freelancers.",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 18,
-          "name": "HealthTech & MedTech"
+          "id": 175,
+          "name": "LUMID AI",
+          "logo": "/media/logos/cropped_jcos3AE.jpg",
+          "image": null,
+          "short_description": "Lumid AI delivers ready-to-use AI agents that eliminate repetitive work so your team can focus on what matters.",
+          "description": "The Problem We're Solving\r\nBusinesses waste countless hours on repetitive tasks like resume screening, customer support, and data entry. These manual processes are error-prone, time-consuming, and prevent teams from focusing on strategic work.\r\n\r\nOur Solution\r\nLumid AI's pre-built agents automate these workflows with advanced AI, reducing operational costs by up to 60% while improving accuracy and consistency. Our agents work 24/7, learning and adapting to your specific needs.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "idea",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 17,
-          "name": "GovTech"
+          "id": 52,
+          "name": "Growz",
+          "logo": "/media/logos/growz-logo-black-g6.png",
+          "image": null,
+          "short_description": null,
+          "description": "Growz is a cutting-edge digital platform revolutionizing agriculture for smallholder farmers. By combining AI-powered advisory tools, real-time pest and disease diagnostics, and an integrated marketplace, Growz empowers farmers to optimize crop management, reduce waste, and improve yields. Designed with sustainability at its core, the platform provides personalized recommendations, market and finance access, and digital training, ensuring farmers thrive in a changing agricultural landscape. With a multidisciplinary team of over 20 experts, Growz is shaping the future of farming through its digital transformation.",
+          "industry": {
+            "id": 8,
+            "name": "AgriTech"
+          },
+          "stage": "seed_",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 16,
-          "name": "Gaming & Entertainment"
+          "id": 100,
+          "name": "Yemak",
+          "logo": "/media/logos/Logo_icon_yemak.png",
+          "image": null,
+          "short_description": null,
+          "description": "Yemak is a cutting-edge food delivery platform designed to connect users with their favorite restaurants quickly and efficiently. With a fleet of cars, scooters, and bicycles, we ensure fast and seamless deliveries, no matter where you are.\r\n\r\nKey Features:\r\n\r\n✅ Wide Restaurant Network – Over 40 partner restaurants offering a variety of cuisines.\r\n✅ Smart Routing – Optimized delivery routes using OSRM API for the fastest and most efficient service.\r\n✅ Seamless Ordering – User-friendly app for easy browsing, ordering, and tracking.\r\n✅ Real-Time Tracking – Live updates so customers can follow their orders in real time.\r\n✅ Reliable Delivery Fleet – Professionally trained couriers using multiple transportation modes.\r\n✅ Secure & Easy Payments – Multiple payment options, including digital wallets and bank cards.\r\n\r\nWith Yemak, we don’t just deliver food—we deliver convenience and save your valuable time.\r\n\r\n🌍 Expanding Soon! Bringing quality food delivery to more locations.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "early_b",
+          "region": {
+            "id": 4263,
+            "name": "Kashkadarya",
+            "county": "Uzbekistan",
+            "label": "Kashkadarya",
+            "lat": "38.563940",
+            "long": "65.531110"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
         },
         {
-          "id": 15,
-          "name": "FinTech"
+          "id": 28,
+          "name": "Smartcast",
+          "logo": "/media/logos/logo_smartcast.png",
+          "image": "/media/backgroun-images/2025-01-07_12.21.22.jpg",
+          "short_description": "The first startup in Uzbekistan specializing in managing media content on monitors (Digital Signage)",
+          "description": "The first startup in Uzbekistan specializing in managing media content on monitors (Digital Signage). We are developing rapidly and have already achieved significant results.:\r\n\r\n- 60+ trusted partners\r\n- more than 3000 connected monitors\r\n- A wide network of clients in various business areas\r\n\r\nOur solution will help the business:\r\n\r\n- Show visitors updated data in real time\r\n- Boost sales through effective visual connections\r\n- Monetize your airtime with ads\r\n\r\nOur customers\r\n\r\n- cafe and restaurant chains\r\n- HoReCa\r\n- Hotels\r\n- Educational centers and universities\r\n- Advertising agencies\r\n- Train stations and airports\r\n- Production enterprises\r\n\r\nWe provide a full range of services, such as creative design services, installation and delivery of equipment for broadcasting content.",
+          "industry": {
+            "id": 30,
+            "name": "AdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4262,
+            "name": "Navoi",
+            "county": "Uzbekistan",
+            "label": "Navoi",
+            "lat": "42.000000",
+            "long": "64.000000"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 14,
-          "name": "EdTech"
+          "id": 139,
+          "name": "Bozorli.uz",
+          "logo": "/media/logos/bozorli_logo.png",
+          "image": null,
+          "short_description": null,
+          "description": "Grocery store that can users do online shopping. This e-commerce startup deliver products to door of each client.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4264,
+            "name": "Samarkand",
+            "county": "Uzbekistan",
+            "label": "Samarkand",
+            "lat": "39.655002",
+            "long": "66.975695"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 13,
-          "name": "E-commerce & Retail Tech"
+          "id": 120,
+          "name": "INSAYR",
+          "logo": "/media/logos/Logo_3_LINE13.png",
+          "image": null,
+          "short_description": null,
+          "description": "Insayr - a platform that combines reservations, rentals, and travel packages! Also, a unique mobile application that forms a travel community and opens Uzbekistan to local and foreign tourists!\n\r\nThe following services are provided through the program, which are provided within the framework of 3 main categories:\nDISCOVER:\n\r\n- Find cafe and restaurant locations\n- Getting information about historical sites, cities, mountain walks, natural slopes, and many other places\n- Travelers' Society (Insayr Social Network)\n\r\nRESERVE:\n\r\n- Residential Reservations (Hotel, Dacha, Resort, Pensioners)\n- Purchase tour packages\n- Air tickets\n- Train Tickets\n- Cultural Entertainment and Event Tickets\n\r\nBUY RENTALS:\n\r\n- Rental of premises (studio, gym [fitness halls, swimming areas, football stadiums, etc.), rental of wedding halls, offices)\n- Car Rental",
+          "industry": {
+            "id": 27,
+            "name": "Travel & Tourism"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 12,
-          "name": "Cybersecurity and Public Safety"
+          "id": 95,
+          "name": "Wisdom English Uzbek Dictionary",
+          "logo": "/media/logos/Wisdom_Logo.png",
+          "image": "/media/backgroun-images/Screenshot_2025-02-17_at_06.12.41.png",
+          "short_description": "The English-Uzbek dictionary, with over 2 million downloads and 400,000 active users per month, is changing the process of learning English in Uzbekistan, making it easier, faster, and more effective.",
+          "description": "The most accurate, detailed, and reliable English-Uzbek dictionary. Wisdom is the final choice for any student, teacher, or language enthusiast, as this dictionary translates more than just words - it helps you truly understand English!\r\n\r\n✅ Comprehensive vocabulary - thousands of carefully selected words and phrases.\r\n✅ Accurate and clear meanings - No confusing explanations, just simple translations for understanding.\r\n✅ Real-life examples - Look at words in action with examples of practical use.\r\n✅ Grammar and Synonyms - Gain deeper knowledge to improve your English language skills.\r\n\r\nWith Wisdom, you don't just translate - you learn, improve, and master English more than ever before!",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4257,
+            "name": "Andijon",
+            "county": "Uzbekistan",
+            "label": "Andijon",
+            "lat": "40.783347",
+            "long": "72.350675"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 11,
-          "name": "ClimateTech & Sustainability"
+          "id": 91,
+          "name": "iapply.org",
+          "logo": "/media/logos/iapplylogo.png",
+          "image": "/media/backgroun-images/iapplylogo.png",
+          "short_description": null,
+          "description": "iApply.org is a scalable Edtech platform that  connects aspiring international students with top universities worldwide and simplifies international student admissions through AI-driven matching, seamless applications, expert mentorship and personalized guidance every step of the way.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 10,
-          "name": "BI & Analytics"
+          "id": 56,
+          "name": "Easy Clean",
+          "logo": "/media/logos/999.png",
+          "image": null,
+          "short_description": null,
+          "description": "Easy Clean is an innovative platform that automates and simplifies the process of providing cleaning services. We create a convenient digital solution that connects clients with professional cleaners, ensuring high-quality cleaning, transparent processes, and time savings.\r\n\r\nOur startup leverages modern technologies, including SaaS and artificial intelligence, to optimize routes, manage orders, and enhance the efficiency of cleaners. Easy Clean is your reliable assistant, making cleaning accessible, fast, and as comfortable as possible.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4261,
+            "name": "Namangan",
+            "county": "Uzbekistan",
+            "label": "Namangan",
+            "lat": "40.999648",
+            "long": "71.672624"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 9,
-          "name": "AI & ML"
+          "id": 169,
+          "name": "MyID",
+          "logo": "/media/logos/logos.png",
+          "image": null,
+          "short_description": "MyID Vision is a biometric system that uses AI for secure identity verification through palm or face scans, providing fast, password-free access in banking, telecom, and public services.",
+          "description": "MyID is a pioneering startup focused on transforming identity verification and authentication. By leveraging cutting-edge computer vision and AI algorithms, MyID offers secure and contactless biometric solutions - such as palm or facial recognition - to streamline and enhance user authentication across various sectors.\r\n\r\nSolution Overview:\r\n\t• Biometric Authentication: Uses palm or facial recognition with advanced AI for quick and secure identity verification, eliminating the need for passwords or physical IDs.\r\n\t• Easy Integration: Provides flexible APIs and SDKs that can be seamlessly integrated into existing systems across banking, telecommunications, healthcare, e-government, and other sectors.\r\n\t• Scalable Architecture: Designed to support high traffic environments and large user bases, making it ideal for enterprise-level deployments.\r\n\t• Contactless Experience: Reduces physical touchpoints and associated hygiene or fraud risks, increasing user trust and satisfaction.",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "early_b",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 8,
-          "name": "AgriTech"
-        }
-      ],
-      "stages": [
-        "seed_",
-        "pre_seed"
-      ],
-      "region": {
-        "id": 389,
-        "name": "Flanders",
-        "country_id": 22,
-        "country_name": "Belgium",
-        "coords": null,
-        "country_coords": {
-          "lat": 50.503887,
-          "long": 4.469936
-        }
-      },
-      "photo": "/media/investors-photos/667194fa14944f2914e38e84_664e06738a29a999ff0b2888_Roman-Rymsha_4.jpeg"
-    },
-    {
-      "id": 17,
-      "name": "Caucasus Ventures",
-      "investor_type": "angel",
-      "short_description": "We are based in Baku. Azerbaijan and focus on investing in the Caucasus, Central Asia, Turkiye, and Eastern Europe. We believe that good founders can be found anywhere and are committed to supporting and empowering entrepreneurial talent in the region.",
-      "industries": [
-        {
-          "id": 30,
-          "name": "AdTech"
+          "id": 136,
+          "name": "D.B.Agro",
+          "logo": "/media/logos/Logo_DWSWvbl.png",
+          "image": "/media/backgroun-images/D.B.Agro_logo.svg",
+          "short_description": null,
+          "description": "The D.B.Agro project is a project aimed at introducing innovative technologies in agriculture and increasing efficiency. Its main goal is to increase yields, save resources, and produce environmentally friendly products using smart farming methods. Within the framework of the project, an Agro database will be formed using automated control systems, advanced irrigation technologies, and modern agricultural equipment.",
+          "industry": {
+            "id": 8,
+            "name": "AgriTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 26,
-          "name": "Social Media & Networking"
+          "id": 85,
+          "name": "OYGUL",
+          "logo": "/media/logos/4x4.png",
+          "image": "/media/backgroun-images/IMG_0649.png",
+          "short_description": null,
+          "description": "OYGUL revolutionizes gifting by creating standardized, high-quality bouquets through a network of local partner florists. We provide expert bouquet designs and assembly instructions, ensuring consistent quality and swift delivery at lower prices. Our “dark store network” approach generates higher margins—up to 60%—and has already demonstrated success with our OYGUL Box. We aim to capture at least 30% of Uzbekistan’s flower market as a launchpad to the $7B MENA region. Driven by a resilient team with past startup experience, OYGUL is on a mission to spread smiles—one bouquet at a time.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
         },
         {
-          "id": 25,
-          "name": "SaaS"
-        }
-      ],
-      "stages": [
-        "seed_",
-        "pre_seed"
-      ],
-      "region": {
-        "id": 4256,
-        "name": "Tashkent",
-        "country_id": 239,
-        "country_name": "Uzbekistan",
-        "coords": {
-          "lat": 41.312336,
-          "lng": 69.278708
+          "id": 160,
+          "name": "AI LAB",
+          "logo": "/media/logos/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2025-03-11_%D0%B2_10.57.08.png",
+          "image": null,
+          "short_description": "Business Process Optimization AI Laboratory",
+          "description": "We are AI LAB, an AI solution lab for business.\r\nOur experts are developing artificial intelligence-based tools to optimize business processes for companies.\r\nWe help companies improve efficiency, reduce costs, and gain a competitive advantage in the market using AI tools.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
-        "country_coords": {
-          "lat": 41.377491,
-          "long": 64.585262
-        }
-      },
-      "photo": "/media/investors-photos/photo_2025-03-07_11-42-12_GNewCqC.jpg"
-    },
-    {
-      "id": 21,
-      "name": "Muhammed Bedevi",
-      "investor_type": "angel",
-      "short_description": "ASFA Ventures",
-      "industries": [
         {
-          "id": 30,
-          "name": "AdTech"
+          "id": 145,
+          "name": "BITO ERP",
+          "logo": "/media/logos/Logo_Bito_mobil_2.png",
+          "image": "/media/backgroun-images/Group_49_1.svg",
+          "short_description": null,
+          "description": "Bito ERP delivers tailored automation solutions for small, medium and large enterprises. Bito helps businesses automate sales, warehouse, supply chain, manufacturing processes with easy-to-use solutions.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 117,
+          "name": "laCafe",
+          "logo": "/media/logos/logo-lamenu.png",
+          "image": null,
+          "short_description": null,
+          "description": "High growth potential - the food technology market is actively developing, and the demand for automated delivery is growing.\r\n\r\nLaMenu is an automation service for restaurants and cafes that allows you to organize online orders, delivery, and work with customers through digital channels.\r\n\r\nMain features of LaMenu:\r\n- Online orders through the website, mobile application, and Telegram bot.\r\n- Delivery and logistics: a system for managing couriers and routes.\r\n- Call center for processing orders by phone.\r\n- Admin panel for managing menu, orders, customers, and finances.\r\n- Integration with POS systems and online payment.\r\n\r\nBenefits:\r\n✅ Increase orders through a convenient online channel.\r\n✅ Process automation and reduction of personnel workload.\r\n✅ A flexible system of analysis and control.\r\n✅ Quick deployment and ease of use.\r\n\r\nLaMenu helps restaurants work more efficiently and increases their profits! Too toxic",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 115,
+          "name": "Movee",
+          "logo": "/media/logos/192x192.png",
+          "image": null,
+          "short_description": "Web and Mobile Platform for logistic companies and truck drivers",
+          "description": "Web and Mobile Platform for logistic companies and truck drivers",
+          "industry": {
+            "id": 22,
+            "name": "Logistics & Supply Chain Management"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 178,
+          "name": "Uzbekistan Tourism Guide",
+          "logo": "/media/logos/IMG_20250414_142743_335.jpg",
+          "image": null,
+          "short_description": "Create convenience for tourists by combining all tourism features in one application.",
+          "description": "The app is ready and is currently active in the Play Market.",
+          "industry": {
+            "id": 27,
+            "name": "Travel & Tourism"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4258,
+            "name": "Bukhara",
+            "county": "Uzbekistan",
+            "label": "Bukhara",
+            "lat": "39.775984",
+            "long": "64.415153"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 137,
+          "name": "AqroQanot - Burgutko'z",
+          "logo": "/media/logos/3_vbRqsSs.png",
+          "image": "/media/backgroun-images/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD_%D0%B1%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.png",
+          "short_description": null,
+          "description": "\"Burgutkoz\" is an innovative aircraft-shaped drone designed for cartography and remote sensing of agricultural areas.\r\n\r\nThe goal of the project is to help farmers with high-precision soil and plant monitoring, effective resource management, and productivity improvement.\r\n\r\nWith Burgutkoz, every farmer can control his field from the sky.",
+          "industry": {
+            "id": 8,
+            "name": "AgriTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 122,
+          "name": "TOKCHA",
+          "logo": "/media/logos/mark_W30pRAq.png",
+          "image": "/media/backgroun-images/1198_Sd8KLs9.jpg",
+          "short_description": null,
+          "description": "\"Tokcha\" is a mobile application that combines electronic and audio books for a new generation of readers, providing access to quality electronic and audio versions of literary works, ranging from fiction and scientific literature to books on business and personal development.\r\n\r\nThe project also includes the digitization and organization of electronic catalogs and the systematic updating of the platform.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4257,
+            "name": "Andijon",
+            "county": "Uzbekistan",
+            "label": "Andijon",
+            "lat": "40.783347",
+            "long": "72.350675"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 81,
+          "name": "Delever",
+          "logo": "/media/logos/logo.fe313206_1.svg",
+          "image": null,
+          "short_description": null,
+          "description": "Delever is an innovative ecosystem for automating online orders, delivery, and business management. We help restaurants, stores, and courier services speed up order processing, minimize errors, and increase revenue.\n\r\n✅ Manage orders across all channels (website, app, Telegram, delivery aggregators).\n✅ Kitchen, logistics, and CRM automation.\n✅ Integration with POS systems and payment services.\n✅ Advanced analysis and marketing tools.\n\r\n📌 Delever - a technology that makes delivery even smarter!",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 73,
+          "name": "Beautify",
+          "logo": "/media/logos/Beautify_Logo.svg",
+          "image": null,
+          "short_description": null,
+          "description": "A tool for  beauty services to generate a flow of clients and the consumables delivery system, which provides the first and only digitalized market data in Uzbekistan.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 47,
+          "name": "MSECURITY",
+          "logo": "/media/logos/new_style_logo_msecurity2.png",
+          "image": "/media/backgroun-images/building.avif",
+          "short_description": "Innovative platform for training and internships in the field of penetration testing",
+          "description": "Innovative platform for training and internships in the field of penetration testing",
+          "industry": {
+            "id": 12,
+            "name": "Cybersecurity and Public Safety"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4261,
+            "name": "Namangan",
+            "county": "Uzbekistan",
+            "label": "Namangan",
+            "lat": "40.999648",
+            "long": "71.672624"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 41,
+          "name": "karavanbazar",
+          "logo": "/media/logos/logo_wf1Irys.png",
+          "image": "/media/backgroun-images/enhanced_logo.png",
+          "short_description": "KaravanBazar.uz helps small businesses sell online, test demand, and scale globally—without needing their own store or tech expertise.",
+          "description": "KaravanBazar.uz is an online platform designed for aspiring entrepreneurs and small businesses, providing them with the opportunity to list their products, test market demand, and expand into new markets without the need to invest in their own online store. The platform is not only focused on the local market but also caters to an international audience, offering sellers tools for scaling their business and adapting their products to meet the demands of global buyers. KaravanBazar.uz helps companies expand their geographic reach, analyze market demand, and discover new opportunities on a worldwide scale.",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 233,
+          "name": "Mohirdev",
+          "logo": "/media/logos/1-01.png",
+          "image": null,
+          "short_description": "Mohirdev is the #1 online IT education platform in Central Asia, empowering learners with expert-driven bootcamps, AI-powered learning, and career-focused outcomes to launch successful tech careers.",
+          "description": "Mohirdev is Central Asia’s leading online IT education platform, offering industry-relevant bootcamps in software development, AI, DevOps, and more. Founded in 2021 in Tashkent, Mohirdev empowers learners through expert-led instruction, AI-powered personalization, and lifetime access to high-quality content. Our mission is to ignite the IT potential in every learner and prepare them for successful, future-proof careers. With 18 bootcamps and a growing library of short courses, we serve a wide range of learners—from students to career changers. Recognized as Uzbekistan’s top IT education provider based on graduate employment, we focus on student outcomes, innovation, and community. Our platform enables practical skill development, mentorship, and job placement support, making Mohirdev the go-to destination for aspiring tech professionals across the region",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 66,
+          "name": "BrailleRecognition",
+          "logo": "/media/logos/ic_launcher.png",
+          "image": "/media/backgroun-images/buymeacofee.png",
+          "short_description": null,
+          "description": "AI-powered Braille Translator app!\r\nBrailleRecognition is designed to help educators, parents, and caregivers easily translate Braille into readable text. Using your phone's camera, the app quickly scans and converts Braille from books, notes, or labels into plain text.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4259,
+            "name": "Fergana",
+            "county": "Uzbekistan",
+            "label": "Fergana",
+            "lat": "40.398365",
+            "long": "71.787557"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 141,
+          "name": "UzWorks",
+          "logo": "/media/logos/Logo.jpg",
+          "image": null,
+          "short_description": "For find job and worker.",
+          "description": "A project aimed at reducing unemployment in Uzbekistan and facilitating communication between workers and employers.",
+          "industry": {
+            "id": 19,
+            "name": "HRTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 135,
+          "name": "Urbo",
+          "logo": "/media/logos/logo_JVkP2l5.png",
+          "image": null,
+          "short_description": "Find, compare, and finance real estate in one place",
+          "description": "Urbo is an online platform for real estate search in Uzbekistan. We aggregate listings for new developments, secondary market properties, rentals, and commercial real estate, providing users with detailed information, price analytics, and convenient search tools.\r\nFor developers, realtors, and property owners, Urbo offers seamless listing management, property promotion, and market insights. Our future plans include bank integrations for mortgage applications, renovation services, investment consulting, and digital notary transactions.",
+          "industry": {
+            "id": 24,
+            "name": "PropTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 111,
+          "name": "SotAi",
+          "logo": "/media/logos/Logo_sotit.png",
+          "image": null,
+          "short_description": null,
+          "description": "We supercharge sales with Ai.\r\n\r\nWe analyze 100% of sales calls, predict lead conversion, give hyper-personalized SDR feedback, auto-fill CRM.\r\n\r\nMore in our website. \r\nAlso you can see our product in our video, it is on our website.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 102,
+          "name": "Astracode",
+          "logo": "/media/logos/emblemb-4000-wo-bg.png",
+          "image": null,
+          "short_description": null,
+          "description": "Astracode is an AI-driven learning platform offering courses in Web Development, Mobile Development, QA, Project Management, and Artificial Intelligence. With no human instructors, AI adapts to each student’s progress, ensuring personalized and effective learning.",
+          "industry": {
+            "id": 30,
+            "name": "AdTech"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 94,
+          "name": "Tomorrow",
+          "logo": "/media/logos/cropped_RuMKR53.jpg",
+          "image": "/media/backgroun-images/photo_2022-05-05_14-47-59d.png",
+          "short_description": "Tomorrow – A New Dawn in Interactive Storytelling",
+          "description": "Tomorrow is an innovative game development startup dedicated to creating immersive, emotionally oriented experiences that blur the line between reality and imagination. At the center of tomorrow lies the task of exploring deep stories, futuristic worlds, and bold choices that determine the player's journey.\r\n\r\nBuild tomorrow. Change everything.",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4266,
+            "name": "Surkhandarya",
+            "county": "Uzbekistan",
+            "label": "Surkhandarya",
+            "lat": "37.952084",
+            "long": "67.126600"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 163,
+          "name": "Applicant.uz",
+          "logo": "/media/logos/No-bg_Z7DOuFA.png",
+          "image": null,
+          "short_description": "Applicant is a multifunctional platform that allows students to apply to any university, scholarship, or grant globally from single & unique platform.",
+          "description": "Applicant is an all-in-one platform that simplifies the global education application process for students at all levels, including community colleges, universities, bachelor's, master's, PhD programs, and more. With a unified profile system, users can apply to multiple universities, scholarships, and grants without leaving the platform. Multilingual support, automatic document translation, and real-time tracking ensure a seamless experience, eliminating the need for external research. Applicant provides a fully integrated solution where students can discover, compare, and apply to educational institutions worldwide in one place, making studying abroad more accessible and efficient than ever.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "idea",
+          "region": {
+            "id": 4264,
+            "name": "Samarkand",
+            "county": "Uzbekistan",
+            "label": "Samarkand",
+            "lat": "39.655002",
+            "long": "66.975695"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 106,
+          "name": "Inter AI",
+          "logo": "/media/logos/inter.ai.png",
+          "image": null,
+          "short_description": null,
+          "description": "Inter AI - is a tool that helps HR specialists filter and interview candidates.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 90,
+          "name": "Airpilot",
+          "logo": "/media/logos/Airpilot_log.png",
+          "image": "/media/backgroun-images/photo_2025-02-13_16-49-49.jpg",
+          "short_description": null,
+          "description": "An advanced mobile simulation application has been developed to promote the capabilities of drones and aircraft models in aerospace technologies",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
+        },
+        {
+          "id": 39,
+          "name": "Twinkle Uzbekistan",
+          "logo": "/media/logos/No-bg_yBQw351.png",
+          "image": "/media/backgroun-images/twinkle-background_remastered_ZAwEsI4.jpg",
+          "short_description": "Twinkle is a monetization platform for active media content creators.",
+          "description": "Twinkle is a monetization platform exclusively for creators who produce intellectual, culturally rich, and meaningful content. We provide only selected creators with the opportunity to transform their media products into real value. With Twinkle, creators can earn revenue through donations, subscriptions, and sponsorships while continuing to produce high-quality content that educates, inspires, and adds value to their audience.",
+          "industry": {
+            "id": 26,
+            "name": "Social Media & Networking"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4264,
+            "name": "Samarkand",
+            "county": "Uzbekistan",
+            "label": "Samarkand",
+            "lat": "39.655002",
+            "long": "66.975695"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
+        },
+        {
+          "id": 37,
+          "name": "GREEN PIXEL",
+          "logo": "/media/logos/logo_GP.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Green Pixel is an innovative solution designed for comprehensive management and monitoring of forest ecosystems.\r\nUtilizing artificial intelligence and satellite data, it provides effective tools for monitoring territories in real-time.\r\nGreen Pixel helps to:\r\n   - Preserve natural resources.\r\n   - Prevent illegal logging and ecosystem degradation.\r\n   - Ensure sustainable management of trees.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "seed_",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
           "id": 27,
-          "name": "Travel & Tourism"
+          "name": "TATAXON.uz",
+          "logo": "/media/logos/Screenshot_1.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Universal bulletin board in Uzbekistan",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 26,
-          "name": "Social Media & Networking"
+          "id": 126,
+          "name": "Lost Chapters",
+          "logo": "/media/logos/SVGlogo.svg",
+          "image": null,
+          "short_description": null,
+          "description": "An educational game for IFE (In-flight entertainment) systems on airplanes. Allows passengers on the plane to immerse themselves in the history and culture of the country during the flight. The game also provides tourists with various bonuses to local establishments, in the form of discounts, coupons, etc.",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "pre_seed",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 25,
-          "name": "SaaS"
+          "id": 166,
+          "name": "Yalfin",
+          "logo": "/media/logos/yalfin-logo-1.png",
+          "image": null,
+          "short_description": "Effortless Accounting, Powered by AI",
+          "description": "Yalfin is an accounting platform based on artificial intelligence, primarily designed for simplicity and ease of use. This directly resolves the frustration and time costs associated with complex, traditional accounting software, especially for small and medium-sized enterprises.\r\n\r\nOur main task is to simplify financial management, allowing business owners and accountants to focus on growth and strategic concepts instead of getting stuck in manual data entry, vertical learning curves, and inconvenient interfaces.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4268,
+            "name": "Khorezm region",
+            "county": "Uzbekistan",
+            "label": "Khorezm region",
+            "lat": "41.290284",
+            "long": "60.542854"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 24,
-          "name": "PropTech"
+          "id": 155,
+          "name": "Push30",
+          "logo": "/media/logos/Group.svg",
+          "image": null,
+          "short_description": "We give you health.",
+          "description": "\"Push 30\" is a provider of corporate benefits that provides its clients with unlimited access to more than 150 fitness centers in Baku and Tashkent.\r\n\r\nUse your membership to gain access to more than 100 partners in our network.\r\nThere are no restrictions on entering sports centers and studios.\r\nA diverse selection of fitness centers, such as gyms, swimming pools, pilates, yoga, and much more\r\nVarious sports competitions to improve and make your fitness life brighter\r\nGet various discounts on classes, beauty procedures, shopping, and much more",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 23,
-          "name": "Marketing & AdTech"
+          "id": 146,
+          "name": "pDaftar.uz",
+          "logo": "/media/logos/pdaftar-logo.png",
+          "image": null,
+          "short_description": "A mobile application for small-to-mid sized businesses to manage their financial transactions.",
+          "description": "A mobile application for small-to-mid sized businesses to manage their financial transactions.",
+          "industry": {
+            "id": 25,
+            "name": "SaaS"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4266,
+            "name": "Surkhandarya",
+            "county": "Uzbekistan",
+            "label": "Surkhandarya",
+            "lat": "37.952084",
+            "long": "67.126600"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": true,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 22,
-          "name": "Logistics & Supply Chain Management"
+          "id": 35,
+          "name": "Next KPI",
+          "logo": "/media/logos/logo_2.png",
+          "image": null,
+          "short_description": "Ни один",
+          "description": "Next KPI is a modern system designed to effectively manage scientific and educational processes in educational institutions. This system allows for automated monitoring, analysis, and ranking of scientific achievements and indicators of universities. It is integrated with systems such as Web of Science, Scopus, and HEMIS, allowing for the evaluation of teachers' articles, scientific works, and lesson quality. Next KPI provides users with statistical data in the form of graphs and reports, generates automatic recommendations based on KPI indicators, and facilitates planning. This system helps to effectively manage time and resources by automating educational processes and simplifying management.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": null,
+          "region": {
+            "id": 4263,
+            "name": "Kashkadarya",
+            "county": "Uzbekistan",
+            "label": "Kashkadarya",
+            "lat": "38.563940",
+            "long": "65.531110"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 21,
-          "name": "LegalTech"
+          "id": 202,
+          "name": "StudyGO",
+          "logo": "/media/logos/StudyGO_Academy_logo-topaz-enhance-2x.png",
+          "image": null,
+          "short_description": "A smart educational platform connecting top experts with learners through immersive, engaging, and multilingual courses.",
+          "description": "StudyGO is a modern educational platform offering interactive, gamified, and personalized learning experiences. We connect the best local experts with students across various subjects—from IELTS to biology to business—through online video courses,  and real-time consultations. Available in Uzbek, Russian, and English, StudyGO empowers learners with high-quality content and practical skills while helping experts earn passive income and grow their audience.",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 20,
-          "name": "InsurTech"
+          "id": 185,
+          "name": "Human AI",
+          "logo": "/media/logos/Human_AI.png",
+          "image": null,
+          "short_description": "Human AI creates real-time talking, photorealistic AI avatars. They will work as teachers, advertisers, or virtual interlocutors and support the Uzbek language.",
+          "description": "Human AI is a startup project specializing in creating photorealistic AI avatars that work in real time. They repeat lip movements, facial expressions, and head movements based on live speech. This technology is used in the fields of online education, customer service, virtual meetings, digital marketing, and the metaverse. Unlike existing solutions, our system also supports low latency, real-time, and the Uzbek language. The project is based on advanced AI models, speech synthesis, and WebRTC. The business model is based on SaaS, API, and corporate licenses. This technology aims to make communication more lively and natural through digital people.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "idea",
+          "region": {
+            "id": 4261,
+            "name": "Namangan",
+            "county": "Uzbekistan",
+            "label": "Namangan",
+            "lat": "40.999648",
+            "long": "71.672624"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 19,
-          "name": "HRTech"
+          "id": 171,
+          "name": "SayyohAI",
+          "logo": "/media/logos/5424809205887533006_121.jpg",
+          "image": null,
+          "short_description": "TouristAI is an innovative platform that recommends places to tourists and communicates based on AI. It operates through a question-and-answer system and contributes to the digitalization of tourism.",
+          "description": "TouristAI is an innovative platform based on artificial intelligence that provides tourists with site recommendations and answers their questions. AI makes travel more convenient by providing detailed information about historical monuments, hotels, transport, and local culture. TouristAI delivers reliable information to users quickly and accurately.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4263,
+            "name": "Kashkadarya",
+            "county": "Uzbekistan",
+            "label": "Kashkadarya",
+            "lat": "38.563940",
+            "long": "65.531110"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 18,
-          "name": "HealthTech & MedTech"
+          "id": 164,
+          "name": "Ustozim",
+          "logo": "/media/logos/ustozim-logo-square.png",
+          "image": null,
+          "short_description": "My teacher: Redefining Education with Next-Generation AI",
+          "description": "We empower educational ecosystems with AI-driven personalization, advanced analytics for unmatched engagement and outcomes. We believe it's time to transform education forever. With AI at unprecedented power, our team is ready to set new standards in digital learning - creating engaging, scalable, and adaptive experiences that redefine how knowledge is delivered and consumed, much like building \"TikTok for Education.\"",
+          "industry": {
+            "id": 14,
+            "name": "EdTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 17,
-          "name": "GovTech"
+          "id": 129,
+          "name": "HETA",
+          "logo": "/media/logos/HETA_logo_white_bg_blue.svg",
+          "image": "/media/backgroun-images/all.png",
+          "short_description": null,
+          "description": "Autonomous Electric Tractor Startup Plan\r\n\r\n1. Project Overview\r\nHETA is a driverless electric tractor project designed for smart agriculture. The tractor operates autonomously, performing tasks such as plowing, planting, and other fieldwork. It utilizes artificial intelligence and LiDAR technology to analyze the field and determine optimal movement.\r\n2. Problem and Solution\r\nProblem:\r\n- Shortage of labor in agriculture\r\n- Dependence on diesel fuel and harmful environmental emissions\r\n- Low efficiency and high costs in farming\r\n\r\nSolution:\r\n- Reducing dependence on human labor through an autonomous electric tractor\r\n- Lowering fuel costs by 60-80% by using electric power\r\n- Enhancing efficiency through artificial intelligence\r\n3. Market Analysis\r\nExisting Market\r\n- The global agricultural machinery market surpassed $200 billion in 2023.\r\n- The market for electric and driverless agricultural machinery is rapidly growing.\r\n- Demand for eco-friendly and smart agricultural technology is increasing in Uzbekistan and Central Asia.\r\nPotential Customers\r\n- Farming enterprises\r\n- Large agricultural corporations\r\n- Government and state programs\r\n4. Technological Solution and Innovation\r\n- Autonomous control: AI-powered navigation.\r\n- LiDAR and sensors: Environmental scanning for safe movement.\r\n- Electric-powered operation: Battery and solar energy support.\r\n- IoT and remote control: Operation via smartphone or computer.\r\n5. Business Model\r\n- Primary revenue source: Selling or leasing tractors.\r\n- Additional services: Maintenance and software updates.\r\n- Partnerships: Collaborations with large agribusinesses and government entities.\r\n6. Finance and Investment Requirements\r\nInitial Expenses:\r\n- R&D (Research and Development): $30,000\r\n- Prototype development: $40,000\r\n- Production and testing: $20,000\r\n- Marketing and sales: $10,000\r\nTotal Investment Required: $100,000\r\n 7. Team\r\n- Project Leader: Turdiyev Akbarali\r\n-Engineer: Tursunqulov Avazbek\r\n-Software engineer: Yaxshiliqov Javlon\r\n-Mechanic: Bektoshev Behroz\r\n- Technical Engineers: Specialists in electrical engineering and software development\r\n- Business Development Team: Responsible for investment and marketing strategy\r\n 8. Development Stages\r\n1. Prototype Development (0-6 months)\r\n2. Testing and Certification (6-12 months)\r\n3. Initial Sales and Investor Attraction (12-18 months)\r\n4. Scaling and Mass Production (18+ months)\r\nConclusion\r\nThe HETA startup has the potential to revolutionize agriculture. By leveraging electric power, autonomous control, and smart technology, it can make farming operations more efficient and eco-friendly. With proper investment, the project can rapidly develop and secure its place in the market.",
+          "industry": {
+            "id": 8,
+            "name": "AgriTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 16,
-          "name": "Gaming & Entertainment"
+          "id": 97,
+          "name": "The Golden Horde: Survival",
+          "logo": "/media/logos/newlogo22.png",
+          "image": "/media/backgroun-images/library_hero.png",
+          "short_description": null,
+          "description": "\"The Golden Horde : Survival\" is a medieval 3rd-person survival RPG with strategy elements, based on the historical events of Middle Asia. The game takes in the events of the 13th century, during the reign of the Mongol Empire in Central Asia.",
+          "industry": {
+            "id": 16,
+            "name": "Gaming & Entertainment"
+          },
+          "stage": "seed_",
+          "region": null,
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": true
         },
         {
-          "id": 15,
-          "name": "FinTech"
+          "id": 79,
+          "name": "FINQ",
+          "logo": "/media/logos/Logo.png",
+          "image": null,
+          "short_description": null,
+          "description": "FINQ is an AI-powered loan management platform that simplifies and optimizes lending for both financial institutions and individuals. For banks and lenders, it enhances credit scoring, streamlines loan processing, and improves risk management through AI-driven automation. As a lending platform, FINQ also helps individuals access loans easily by connecting them with suitable financial institutions.",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 14,
-          "name": "EdTech"
+          "id": 75,
+          "name": "instateka-s",
+          "logo": "/media/logos/Logo_Name_C__Ww.svg",
+          "image": null,
+          "short_description": null,
+          "description": "Instateka is a B2B platform for automating real estate transactions. We unite clients, banks and partners into a single ecosystem. The main project is to transfer the mortgage lending process online for professional real estate market participants.",
+          "industry": {
+            "id": 15,
+            "name": "FinTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4262,
+            "name": "Navoi",
+            "county": "Uzbekistan",
+            "label": "Navoi",
+            "lat": "42.000000",
+            "long": "64.000000"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 13,
-          "name": "E-commerce & Retail Tech"
+          "id": 62,
+          "name": "ConnectaCRM",
+          "logo": "/media/logos/Connecta_CAG_small.png",
+          "image": null,
+          "short_description": null,
+          "description": "CRM platform for logistics in the USA",
+          "industry": {
+            "id": 22,
+            "name": "Logistics & Supply Chain Management"
+          },
+          "stage": "early_a",
+          "region": {
+            "id": 4265,
+            "name": "Syrdarya",
+            "county": "Uzbekistan",
+            "label": "Syrdarya",
+            "lat": "40.830914",
+            "long": "68.666187"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 12,
-          "name": "Cybersecurity and Public Safety"
+          "id": 157,
+          "name": "HomeFix",
+          "logo": "/media/logos/logo_H.png",
+          "image": null,
+          "short_description": "HomeFix is a tech-driven home services startup offering over 16 maintenance solutions for homes and offices, with on-demand and subscription plans, powered by a fully automated digital ecosystem.",
+          "description": "HomeFix is an innovative home and office services startup providing over 16 specialized solutions, including plumbing, electrical work, smart home installations, and industrial equipment maintenance. The company operates through a fully automated digital ecosystem, ensuring seamless service management. HomeFix offers both on-demand and subscription-based services, catering to homeowners and businesses. Within its first four months, it generated $10,000 in revenue and is working to secure $500,000 in funding. To scale operations and qualify for IT Park residency, HomeFix is expanding into software implementation and customization. Led by Technical Manager Ikhtiyor, the startup leverages technology to optimize service efficiency, automate processes, and enhance customer experience, positioning itself as a leader in the home services industry.",
+          "industry": {
+            "id": 24,
+            "name": "PropTech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 11,
-          "name": "ClimateTech & Sustainability"
+          "id": 128,
+          "name": "ELBOZOR",
+          "logo": "/media/logos/Group.png",
+          "image": null,
+          "short_description": null,
+          "description": "Elbozor is a next-generation e-commerce classifieds service that makes it easy to sell and buy everything you need nearby",
+          "industry": {
+            "id": 13,
+            "name": "E-commerce & Retail Tech"
+          },
+          "stage": "seed_",
+          "region": {
+            "id": 4256,
+            "name": "Tashkent",
+            "county": "Uzbekistan",
+            "label": "Tashkent",
+            "lat": "41.312336",
+            "long": "69.278708"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": true,
+          "tech_awards_winner": false
         },
         {
-          "id": 10,
-          "name": "BI & Analytics"
+          "id": 87,
+          "name": "Donortop.uz",
+          "logo": "/media/logos/Icon_4.svg",
+          "image": "/media/backgroun-images/banner_-_1.jpg",
+          "short_description": "Ни один",
+          "description": "Donortop.uz is an online platform that makes it easy to find and contact blood donors in Uzbekistan. The project aims to provide prompt assistance to patients, eliminate difficulties in finding blood, and develop a culture of donation. Donors register and leave their information, and there is also an opportunity to search for and contact donors based on their needs.",
+          "industry": {
+            "id": 18,
+            "name": "HealthTech & MedTech"
+          },
+          "stage": "pre_seed",
+          "region": {
+            "id": 4259,
+            "name": "Fergana",
+            "county": "Uzbekistan",
+            "label": "Fergana",
+            "lat": "40.398365",
+            "long": "71.787557"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         },
         {
-          "id": 9,
-          "name": "AI & ML"
-        },
-        {
-          "id": 8,
-          "name": "AgriTech"
+          "id": 84,
+          "name": "Examy",
+          "logo": "/media/logos/logored.png",
+          "image": null,
+          "short_description": null,
+          "description": "Examy is a combination of AI powered IELTS mock and practice platfrom where users can take simulated IELTS tests and find out their scores within a minute. Examy, unlike other mock platforms, provides full report on the results, mistakes of the test taker along with comments on how to improve. Examy has helped over 10,000 students prepare for IELTS exam and achieve their desired scores.",
+          "industry": {
+            "id": 9,
+            "name": "AI & ML"
+          },
+          "stage": "expension",
+          "region": {
+            "id": 4260,
+            "name": "Jizak",
+            "county": "Uzbekistan",
+            "label": "Jizak",
+            "lat": "40.133180",
+            "long": "67.823408"
+          },
+          "is_verified": false,
+          "digital_startup_awards_participant": false,
+          "is_member": false,
+          "tech_awards_winner": false
         }
-      ],
-      "stages": [
-        "pre_seed",
-        "early_b",
-        "serias_a",
-        "early_a",
-        "seed_",
-        "idea"
-      ],
-      "region": {
-        "id": 3034,
-        "name": "Ar Riyad",
-        "country_id": 196,
-        "country_name": "Saudi Arabia",
-        "coords": null,
-        "country_coords": {
-          "lat": 23.885942,
-          "long": 45.079162
-        }
-      },
-      "photo": "/media/investors-photos/Artboard_38_copy_4.png"
-    },
-    {
-      "id": 23,
-      "name": "Sherzod Gafurov",
-      "investor_type": "angel",
-      "short_description": null,
-      "industries": [
-        {
-          "id": 30,
-          "name": "AdTech"
-        },
-        {
-          "id": 27,
-          "name": "Travel & Tourism"
-        },
-        {
-          "id": 26,
-          "name": "Social Media & Networking"
-        },
-        {
-          "id": 25,
-          "name": "SaaS"
-        },
-        {
-          "id": 24,
-          "name": "PropTech"
-        },
-        {
-          "id": 23,
-          "name": "Marketing & AdTech"
-        },
-        {
-          "id": 22,
-          "name": "Logistics & Supply Chain Management"
-        },
-        {
-          "id": 21,
-          "name": "LegalTech"
-        },
-        {
-          "id": 20,
-          "name": "InsurTech"
-        },
-        {
-          "id": 19,
-          "name": "HRTech"
-        },
-        {
-          "id": 18,
-          "name": "HealthTech & MedTech"
-        },
-        {
-          "id": 17,
-          "name": "GovTech"
-        },
-        {
-          "id": 16,
-          "name": "Gaming & Entertainment"
-        },
-        {
-          "id": 15,
-          "name": "FinTech"
-        },
-        {
-          "id": 14,
-          "name": "EdTech"
-        },
-        {
-          "id": 13,
-          "name": "E-commerce & Retail Tech"
-        },
-        {
-          "id": 12,
-          "name": "Cybersecurity and Public Safety"
-        },
-        {
-          "id": 11,
-          "name": "ClimateTech & Sustainability"
-        },
-        {
-          "id": 10,
-          "name": "BI & Analytics"
-        },
-        {
-          "id": 9,
-          "name": "AI & ML"
-        },
-        {
-          "id": 8,
-          "name": "AgriTech"
-        }
-      ],
-      "stages": [
-        "pre_seed",
-        "early_b",
-        "serias_a",
-        "early_a",
-        "seed_",
-        "idea"
-      ],
-      "region": {
-        "id": 4256,
-        "name": "Tashkent",
-        "country_id": 239,
-        "country_name": "Uzbekistan",
-        "coords": {
-          "lat": 41.312336,
-          "lng": 69.278708
-        },
-        "country_coords": {
-          "lat": 41.377491,
-          "long": 64.585262
-        }
-      },
-      "photo": "/media/investors-photos/image_2025-08-01_14-57-58.png"
-    },
-    {
-      "id": 24,
-      "name": "MFaktor",
-      "investor_type": "angel",
-      "short_description": null,
-      "industries": [
-        {
-          "id": 26,
-          "name": "Social Media & Networking"
-        },
-        {
-          "id": 23,
-          "name": "Marketing & AdTech"
-        },
-        {
-          "id": 14,
-          "name": "EdTech"
-        }
-      ],
-      "stages": [
-        "seed_",
-        "pre_seed"
-      ],
-      "region": {
-        "id": 4256,
-        "name": "Tashkent",
-        "country_id": 239,
-        "country_name": "Uzbekistan",
-        "coords": {
-          "lat": 41.312336,
-          "lng": 69.278708
-        },
-        "country_coords": {
-          "lat": 41.377491,
-          "long": 64.585262
-        }
-      },
-      "photo": "/media/investors-photos/IMG_7850.jpeg"
-    },
-    {
-      "id": 26,
-      "name": "Инвестиционный фонд Tanay VC",
-      "investor_type": "angel",
-      "short_description": "The TANAY VC investment ecosystem is a set of tools for structuring, investing, and developing innovative projects: the Tanay VC Investment Fund, the Siberian, Ural, and Far Eastern Investors Club, the International Mentoring Club, the Eurasia International Investment Academy, the FINMUSTER Investment Platform, the BIG AYIQ Association, and many others.  Areas of activity: Investments in digital and industrial international innovation projects. International technology transfer. M&A Transactions. Venture Learning Program and Accelerator. We are preparing projects for the PRE IPO!",
-      "industries": [
-        {
-          "id": 30,
-          "name": "AdTech"
-        },
-        {
-          "id": 27,
-          "name": "Travel & Tourism"
-        },
-        {
-          "id": 26,
-          "name": "Social Media & Networking"
-        },
-        {
-          "id": 25,
-          "name": "SaaS"
-        },
-        {
-          "id": 24,
-          "name": "PropTech"
-        },
-        {
-          "id": 23,
-          "name": "Marketing & AdTech"
-        },
-        {
-          "id": 22,
-          "name": "Logistics & Supply Chain Management"
-        },
-        {
-          "id": 21,
-          "name": "LegalTech"
-        },
-        {
-          "id": 20,
-          "name": "InsurTech"
-        },
-        {
-          "id": 19,
-          "name": "HRTech"
-        },
-        {
-          "id": 18,
-          "name": "HealthTech & MedTech"
-        },
-        {
-          "id": 17,
-          "name": "GovTech"
-        },
-        {
-          "id": 16,
-          "name": "Gaming & Entertainment"
-        },
-        {
-          "id": 15,
-          "name": "FinTech"
-        },
-        {
-          "id": 14,
-          "name": "EdTech"
-        },
-        {
-          "id": 13,
-          "name": "E-commerce & Retail Tech"
-        },
-        {
-          "id": 12,
-          "name": "Cybersecurity and Public Safety"
-        },
-        {
-          "id": 11,
-          "name": "ClimateTech & Sustainability"
-        },
-        {
-          "id": 10,
-          "name": "BI & Analytics"
-        },
-        {
-          "id": 9,
-          "name": "AI & ML"
-        },
-        {
-          "id": 8,
-          "name": "AgriTech"
-        }
-      ],
-      "stages": [
-        "early_a",
-        "seed_",
-        "pre_seed",
-        "serias_a"
-      ],
-      "region": {
-        "id": 4256,
-        "name": "Tashkent",
-        "country_id": 239,
-        "country_name": "Uzbekistan",
-        "coords": {
-          "lat": 41.312336,
-          "lng": 69.278708
-        },
-        "country_coords": {
-          "lat": 41.377491,
-          "long": 64.585262
-        }
-      },
-      "photo": "/media/investors-photos/cropped.jpg"
+      ]
     }
-  ]
-}
+    // ... остальные данные ...
+  ]; // ⚠️ МАССИВ ДОЛЖЕН БЫТЬ ЗАКРЫТ ЗДЕСЬ
+
+  console.log("%c🚀 НАЧИНАЕМ ИМПОРТ ВСЕХ ИНВЕСТОРОВ",
+  "color: #3fcac3; font-size: 20px; font-weight: bold");
+  console.log(`📊 Всего инвесторов для импорта: ${investorsData.length
+  }\n`);
+
+  let successCount = 0;
+  let errorCount = 0;
+  const results = [];
+
+  // ⚠️ ОШИБКА БЫЛА ЗДЕСЬ - использовалось projectData вместо investorsData
+  for (let i = 0; i < investorsData.length; i++) {
+    const investor = investorsData[i
+    ]; // ✅ ИСПРАВЛЕНО
+    
+    console.log(`%c[${i + 1
+      }/${investorsData.length
+      }
+    ] ${investor.name
+    }`,
+    "color: #36b2ad; font-weight: bold");
+    
+    try {
+      const response = await fetch("http://localhost:3000/startups",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(investor),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status
+        }: ${response.statusText
+        }`);
+      }
+
+      const data = await response.json();
+      console.log(`%c✅ Успешно! ID: ${data.receivedData?.id || 'N/A'
+      }`,
+      "color: #4caf50");
+      console.log(data);
+      successCount++;
+      results.push({ 
+        name: investor.name, 
+        status: 'success', 
+        id: data.receivedData?.id
+      });
+    } catch (error) {
+      console.log(`%c❌ Ошибка: ${error.message
+      }`,
+      "color: #f44336");
+      errorCount++;
+      results.push({ 
+        name: investor.name, 
+        status: 'error', 
+        error: error.message
+      });
+    }
+    // Задержка между запросами
+    await new Promise(resolve => setTimeout(resolve,
+    400));
+    console.log(""); // Пустая строка для разделения
+  }
+
+  console.log("\n" + "=".repeat(70));
+  console.log("%c📊 ИТОГОВЫЙ ОТЧЕТ",
+  "color: #3fcac3; font-size: 18px; font-weight: bold");
+  console.log(`%c✅ Успешно импортировано: ${successCount
+  }`,
+  "color: #4caf50; font-size: 16px; font-weight: bold");
+  console.log(`%c❌ Ошибок: ${errorCount
+  }`,
+  "color: #f44336; font-size: 16px; font-weight: bold");
+  console.log(`%c📈 Процент успеха: ${Math.round((successCount / investorsData.length) * 100)
+  }%`,
+  "color: #3fcac3; font-size: 16px; font-weight: bold");
+  console.log("=".repeat(70));
+  
+  // Детальная таблица результатов
+  console.log("\n%c📋 ДЕТАЛЬНАЯ ТАБЛИЦА:",
+  "color: #3fcac3; font-size: 16px; font-weight: bold");
+  console.table(results);
+  
+  return results;
+})();
